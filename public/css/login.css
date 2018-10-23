@@ -1,0 +1,42 @@
+body {
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+.container  {
+  border-top: 30px solid #04aeee;
+  border-bottom: 30px solid #04aeee;
+  border-left: 5px solid #04aeee;
+  border-right: 5px solid #04aeee;
+  border-radius: 5px;
+  width: fit-content;
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+}
+
+h1  {
+  font-size: 50px;
+  margin-top: 0;
+  font-family: 'Pathway Gothic One', sans-serif;
+}
+
+#register-redirect  {
+  color: black;
+  text-align: left;
+  margin: 10px;
+}
+
+.form-input-attr  {
+  text-align: right;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.login-button > input {
+  color: orangered;
+  border: 1px solid;
+  border-radius: 5px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

@@ -7,18 +7,29 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Login</title>
-		<link rel="stylesheet" href="#" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
+		<link rel="stylesheet" href="../../public/css/login.css" type="text/css"/>
 	</head>
 	<body>
-    <h1>LOGIN</h1>
-    <form action="<?php echo Config::APP_URL . 'Controller/LoginController.php' ?>" method="post">
-      User name:<br>
-      <input type="text" name="username"><br>
-      User password:<br>
-      <input type="password" name="psw"><br>
-      <a href="<?php echo Config::APP_URL . 'views/pages/Register.php' ?>">Don't have an account?</a><br>
-      <input type="submit" value="Login">
-    <form>
+    <div class="container">
+      <h1>LOGIN</h1>
+      <form action="<?php echo Config::APP_URL . 'Controller/LoginController.php' ?>" method="post">
+        <div class="form-input-attr">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username">
+        </div>
+        <div class="form-input-attr">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password">
+        </div>
+        <div id="register-redirect">
+          <a href="<?php echo Config::APP_URL . 'views/pages/Register.php' ?>">Don't have an account?</a><br>
+        </div>
+        <div class="login-button">
+          <input type="submit" value="LOGIN">
+        </div>
+      <form>
+    </div>
   </body>
 <html>
 
