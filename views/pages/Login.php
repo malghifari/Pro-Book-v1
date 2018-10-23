@@ -7,8 +7,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Login</title>
-    <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
-		<link rel="stylesheet" href="../../public/css/login.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pathway+Gothic+One" rel="stylesheet">
+		<link rel="stylesheet" href="../../public/css/login-register.css" type="text/css"/>
 	</head>
 	<body>
     <div class="container">
@@ -25,7 +25,7 @@
         <div id="register-redirect">
           <a href="<?php echo Config::APP_URL . 'views/pages/Register.php' ?>">Don't have an account?</a><br>
         </div>
-        <div class="login-button">
+        <div id="login-button">
           <input type="submit" value="LOGIN">
         </div>
       <form>
