@@ -1,0 +1,42 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.container  {
+  border-top: 30px solid #04aeee;
+  border-bottom: 30px solid #04aeee;
+  border-left: 5px solid #04aeee;
+  border-right: 5px solid #04aeee;
+  border-radius: 5px;
+  width: fit-content;
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+}
+
+.flex-container {
+  display: flex;
+}
+
+form  {
+  text-align: left;
+}
+
+#order-button {
+  text-align: right;
+}
+
+.description  {
+  text-align: left;
+  width: 300px;
+}
+
+.image-rating  {
+  width: 200px;
+}
+
+img {
+  width: 80%;
+}
