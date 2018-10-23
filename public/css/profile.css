@@ -1,5 +1,7 @@
 .frame {
-	width: 	50%;	
+	position: relative;
+	width: 	45%;
+	height: 300px;	
 	margin: 	auto;
 }
 .avatar {
@@ -53,4 +55,8 @@ td {
 	text-align: left;
 	font-family: calibri;
 	font-size: 	20pt;
+}
+
+body {
+	margin-top: 0;
 }
