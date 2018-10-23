@@ -5,7 +5,7 @@ if (class_exists('Config'))  {
 } else  {
   require_once('../Model/Database.php');
 }
-
+echo $_SERVER['DOCUMENT_ROOT'];
 class RegisterController  {
   public static function register()  {
     $query = "INSERT INTO user(name, username, email, password, address, `phone-number`)
