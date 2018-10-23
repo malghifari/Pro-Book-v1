@@ -1,6 +1,7 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 12px;
+  letter-spacing: 1px;
 }
 
 .container  {
@@ -16,27 +17,45 @@ body {
 }
 
 h1  {
+  letter-spacing: 5px;
   font-size: 50px;
   margin-top: 0;
+  margin-bottom: 20px;
   font-family: 'Pathway Gothic One', sans-serif;
 }
 
-#register-redirect  {
+#register-redirect, #login-redirect  {
   color: black;
   text-align: left;
-  margin: 10px;
+  margin-top: 20px;
+  margin-bottom: 7px;
+  letter-spacing: normal;
+  font-size: 12px;
+}
+
+.form-input-attr > label  {
+  margin-right: 10px;
 }
 
 .form-input-attr  {
+  color: #262626;
   text-align: right;
   margin-right: 20px;
   margin-left: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 
-.login-button > input {
+#login-button > input, #register-button > input {
   color: orangered;
   border: 1px solid;
   border-radius: 5px;
+  font-size: 17px;
+  font-weight: 550;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 5px;
+  background-color: white;
+}
+
+textarea  {
+  vertical-align: text-top;
 }

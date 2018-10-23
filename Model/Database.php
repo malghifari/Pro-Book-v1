@@ -1,6 +1,8 @@
 <?php
 
-require_once('../Config/Config.php');
+if (!class_exists('Config'))  {
+  require_once('../Config/Config.php');
+}
 
 class Database
 {
