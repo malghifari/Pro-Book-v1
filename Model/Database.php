@@ -21,7 +21,7 @@ class Database
       $statement = $db->prepare($query);
       $statement->execute();
       if (strpos($query, 'SELECT') !== false || strpos($query, 'select') !== false || strpos($query, 'Select') !== false) {
-        return $statement->fetch(PDO::FETCH_ASSOC);
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
       }
       return;
   }
