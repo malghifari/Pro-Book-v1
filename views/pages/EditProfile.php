@@ -14,7 +14,7 @@
 	<body>
 		<div class = frame>
 			<h1>Edit Profile</h1>
-			<form method="post" action="../../Controller/EditProfileController.php">
+			<form method="post" action="../../Controller/ProfileController.php">
 			  <table>
 			  	<tr>
 			  		<th style="width:25%;"></th>
@@ -49,7 +49,7 @@
 			  <br>
 			  <div id="back-button"><a href="Profile.php" style="text-decoration: none;"> Back </a></div>
 			  
-			  <input type="submit" id="save-button" value="Save">
+			  <input type="submit" name="save" id="save-button" value="Save">
 			</form> 
 		</div>
 	</body>

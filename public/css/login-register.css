@@ -11,6 +11,7 @@ body {
   border-right: 5px solid #04aeee;
   border-radius: 5px;
   width: fit-content;
+  width: -moz-fit-content;
   text-align: center;
   margin: auto;
   padding: 20px;
