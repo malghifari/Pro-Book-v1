@@ -1,0 +1,59 @@
+.frame {
+	position: relative;
+	width: 	45%;
+	height: 300px;	
+	margin: 	auto;
+}
+
+table {
+	width: 97%;
+}
+h1 {
+	color:#f26600; 
+	font-size:28pt; 
+	font-family: 'Open Sans', sans-serif;
+}
+
+td {
+	font-family: calibri;
+}
+
+td > input {
+	width: 100%;
+}
+
+td > textarea {
+	width: 100%;
+}
+
+#profile-picture {
+	width: 80%;
+	height: 80%;
+	border: solid 2px black;
+}
+#back-button {
+	border: 2px solid #d9534f;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 15pt;
+	font-family: calibri;
+	width: -moz-fit-content;
+	position: absolute;
+}
+#back-button > a {
+	display: block;
+	padding: 3px 30px 3px !important;
+	color: #d9534f; 
+}
+#save-button {
+	padding: 3px 30px 3px !important;
+	border: none;
+	background-color: #0094cc;
+	color: white;
+	font-size: 15pt;
+	border-radius: 5px;
+	text-align: center;
+	position: absolute;
+	right: 	15px;
+	font-family: calibri;
+}
