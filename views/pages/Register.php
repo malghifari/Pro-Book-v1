@@ -14,7 +14,7 @@
 	<body>
     <div class="container">
       <h1>REGISTER</h1>
-      <form action="<?php echo Config::APP_URL . 'Controller/RegisterController.php' ?>" method="post">
+      <form action="<?php echo Config::APP_URL . '/Controller/RegisterController.php' ?>" method="post">
         <div class="form-input-attr">
           <label for="name">Name</label>
           <input type="text" id="name" name="name">
@@ -44,7 +44,7 @@
           <input type="text" id="phone-number" name="phone-number">
         </div>
         <div id="login-redirect">
-          <a href="<?php echo Config::APP_URL . 'views/pages/Login.php' ?>">Already have an account?</a><br>
+          <a href="<?php echo Config::APP_URL . '/views/pages/Login.php' ?>">Already have an account?</a><br>
         </div>
         <div id="register-button">
           <input type="submit" value="REGISTER">
