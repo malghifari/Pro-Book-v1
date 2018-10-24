@@ -1,7 +1,5 @@
 <?php
   require_once('../../Config/Config.php');
-  include('header.php');
-  require_once(Config::DOCUMENT_ROOT . '/views/pages/header.php');
   session_start();
 ?>
 
@@ -13,6 +11,7 @@
 		<link rel="stylesheet" href="../../public/css/search.css"/>
     </head>
     <body>
+        <?php include Config::DOCUMENT_ROOT . "/views/includes/Header.php"?>
         <div class = "frame">
             <h1 style="font-family: 'Dosis', sans-serif";>Search Book</h1>
             <!-- The Form -->

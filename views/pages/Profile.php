@@ -3,7 +3,6 @@
 	include '../../Controller/ProfileController.php';
 	// echo (ProfileController::fetchUser('alghi'));
 	$profile = ProfileController::fetchUser($_SESSION['username']);
-	include 'header.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="../../public/css/profile.css">
 	</head>
 	<body>
+		<?php include Config::DOCUMENT_ROOT . "/views/includes/Header.php"?>
 		<div class = frame>	
 			<div class="upperBox">
 				<div>
