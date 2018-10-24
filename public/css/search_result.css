@@ -1,11 +1,16 @@
-<style>
 body {
-    font-family: Arial;
+    font-family: Arial
 }
 
+.frame {
+    position: relative;
+	width: 	45%;
+	height: 300px;	
+	margin: 	auto;
+}
 
-
-h1 {
+h2 {
+    font-size: 10pt;
+    font-family: 'Dosis', sans-serif;
     color:	#FF8C00;
-    font-size: 38pt;
 }

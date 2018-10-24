@@ -1,6 +1,6 @@
 <?php
   require_once('../../Config/Config.php');
-  require_once(Config::DOCUMENT_ROOT . '/views/includes/Header.php');
+  include('header.php');
   session_start();
 ?>
 
@@ -12,15 +12,15 @@
 		<link rel="stylesheet" href="../../public/css/search.css"/>
     </head>
     <body>
-    
-        <h1>Search Book</h1>
-        <!-- The Form -->
-        <form class="bloksearch"  action="<?php echo Config::APP_URL . '/Controller/SearchController.php' ?>" method="post">
-            <input type="text" placeholder="Input search term.." name="title" value="">
-            <br><br><br>
-            <button type="submit" >Search
-            </button>
-        </form>
+        <div class = "frame">
+            <h1 style="font-family: 'Dosis', sans-serif";>Search Book</h1>
+            <!-- The Form -->
+            <form class="bloksearch"  action="<?php echo Config::APP_URL . '/Controller/SearchController.php' ?>" method="post">
+                <input type="text" placeholder="Input search term.." name="title" value="">
+                <button type="submit" >Search
+                </button>
+            </form>
+        </div>
     </body>
 </html>
 

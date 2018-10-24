@@ -3,7 +3,7 @@
 session_start();
 
 if (class_exists('Config'))  {
-    require_once(Config::DOCUMENT_ROOT . '/Model/Database.php');
+    require_once('../Model/Database.php');
 } else  {
     require_once('../Model/Database.php');
 }
