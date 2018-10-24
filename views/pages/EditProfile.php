@@ -3,17 +3,17 @@
 	include '../../Controller/ProfileController.php';
 	// echo (ProfileController::fetchUser('alghi'));
 	$profile = ProfileController::fetchUser($_SESSION['username']);
-	include 'header.php';
 ?>
 
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
+		<title>Edit Profile</title>
 		<link rel="stylesheet" type="text/css" href="../../public/css/editProfile.css">
 	</head>
 	<body>
 		<div class = frame>
+			<?php include Config::DOCUMENT_ROOT . "/views/includes/Header.php"?>
 			<h1>Edit Profile</h1>
 			<form method="post" action="../../Controller/ProfileController.php">
 			  <table>
