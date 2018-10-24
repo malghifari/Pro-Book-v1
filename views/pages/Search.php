@@ -15,8 +15,8 @@
             <?php include Config::DOCUMENT_ROOT . "/views/includes/Header.php"?>
             <h1 style="font-family: 'Dosis', sans-serif";>Search Book</h1>
             <!-- The Form -->
-            <form class="bloksearch"  action="<?php echo Config::APP_URL . '/Controller/SearchController.php' ?>" method="post">
-                <input type="text" placeholder="Input search term.." name="title" value="">
+            <form class="bloksearch"  action="<?php echo Config::APP_URL . '/views/pages/search_result.php' ?>" method="post">
+                <input type="text" placeholder="Input search term.." name="title" value=""><br><br><br>
                 <button type="submit" >Search
                 </button>
             </form>
