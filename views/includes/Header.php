@@ -6,7 +6,7 @@
         Pro<span class = "book">-Book</span>
     </p>
     <div class = "hi-username">
-        Hi, tayo
+        Hi, <?php echo $_COOKIE['username'];?>
     </div>
     <button class="logout" type="submit" ><i class = "fas fa-power-off" style = "font-size : 25px";></i></button>
 </div>

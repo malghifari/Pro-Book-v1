@@ -2,7 +2,12 @@
 	include '../../Config/Config.php';
 	include '../../Controller/ProfileController.php';
 	// echo (ProfileController::fetchUser('alghi'));
-	$profile = ProfileController::fetchUser($_SESSION['username']);
+	if (empty($_COOKIE['username'])) {
+		header('Location: Login.php');
+		die();
+	} else {
+		$profile = ProfileController::fetchUser($_COOKIE['username']);	
+	}
 ?>
 
 <!DOCTYPE html>
@@ -24,9 +29,7 @@
 				<h2 class="profileTitle"><?php echo $profile["name"] ?></h2>
 				<br>
 			</div>
-		
 			<h1 class="profile-header">My Profile</h1>
-
 			<table id="profileTable">
 			  <tr class="header">
 			  	<th style="width:10%;"></th>

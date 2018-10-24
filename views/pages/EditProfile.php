@@ -2,7 +2,12 @@
 	include '../../Config/Config.php';
 	include '../../Controller/ProfileController.php';
 	// echo (ProfileController::fetchUser('alghi'));
-	$profile = ProfileController::fetchUser($_SESSION['username']);
+	if (empty($_COOKIE['username'])) {
+		header('Location: Login.php');
+		die();
+	} else {
+		$profile = ProfileController::fetchUser($_COOKIE['username']);	
+	}
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +21,44 @@
 			<?php include Config::DOCUMENT_ROOT . "/views/includes/Header.php"?>
 			<h1>Edit Profile</h1>
 			<form method="post" action="../../Controller/ProfileController.php">
+<!--                <div>-->
+<!--                    <div class="row">-->
+<!--                        <div class="first-column avatar-column">-->
+<!--                            <div class="avatar">-->
+<!---->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="second-column">-->
+<!--                            Update profile picture-->
+<!---->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="row">-->
+<!--                        <div class="first-collumn">-->
+<!---->
+<!--                        </div>-->
+<!--                        <div class="second-collumn">-->
+<!---->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="row">-->
+<!--                        <div class="first-collumn">-->
+<!---->
+<!--                        </div>-->
+<!--                        <div class="second-collumn">-->
+<!---->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="row">-->
+<!--                        <div class="first-collumn">-->
+<!---->
+<!--                        </div>-->
+<!--                        <div class="second-collumn">-->
+<!---->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
 			  <table>
 			  	<tr>
 			  		<th style="width:25%;"></th>
