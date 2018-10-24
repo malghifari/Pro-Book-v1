@@ -26,7 +26,7 @@
           <a href="<?php echo Config::APP_URL . '/views/pages/Register.php' ?>">Don't have an account?</a><br>
         </div>
         <div id="login-button">
-          <input type="submit" value="LOGIN">
+          <input type="submit" name="Login" value="LOGIN">
         </div>
       <form>
     </div>
