@@ -61,15 +61,21 @@ class RegisterController  {
     );
     $row = Database::exec($query, $queryParams)[0];
     if (empty($row))  {
-      return 'NOT OK';
+      return 'Available';
     } else  {
-      return 'OK';
+      return 'Not Available';
     }
   }
 }
 
 if ($_GET['username'])  {
   $exist = RegisterController::isExist('username', $_GET['username']);
+  header('Content-type: text/plain');
+  echo $exist;
+}
+
+if ($_GET['email'])  {
+  $exist = RegisterController::isExist('email', $_GET['email']);
   header('Content-type: text/plain');
   echo $exist;
 }

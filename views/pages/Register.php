@@ -26,6 +26,7 @@
         <div class="form-input-attr">
           <label for="email">Email</label>
           <input type="text" id="email" name="email">
+          <div class="status-email"></div>
         </div>
         <div class="form-input-attr">
           <label for="password">Password</label>
