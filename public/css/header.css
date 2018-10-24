@@ -2,6 +2,7 @@
     background-color: rgb(0,174,239);
     height: 60px;
     position: relative;
+    color: white;
 }
 
 .frame {
@@ -24,19 +25,21 @@
 }
 
 .navbar {
-    background-color:rgb(0,148,204);
-    overflow: auto;
-    display: flex;
+  background-color:rgb(0,148,204);
+  overflow: auto;
+  display: flex;
+  font-family: calibri;
+  font-size: 20pt;
   }
   
 .navbar a {
-  float: left;
-  padding: 17px;
   color: white;
+  float: left;
+  padding: 10px;
   text-decoration: none;
-  font-size: 17px;
   text-align: center;
   flex-grow: 1;
+  border: solid black 0.5pt;
 }
   
 .navbar a:hover {
@@ -62,4 +65,21 @@ h1 {
 
 body  {
   margin-top: 0px;
+}
+
+p {
+  position: absolute;
+  margin: 7px;
+  margin-left: 15px;
+}
+p.detail {
+  color: rgb(242,216,0);
+  font-size: 24pt;
+  font-family: calibri;
+}
+
+span.book {
+  color: white;
+  font-size: 24pt;
+  font-family: calibri;
 }
