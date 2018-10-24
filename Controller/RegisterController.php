@@ -47,6 +47,37 @@ class RegisterController  {
     header($header);
     die();
   }
+  public static function isExist($attr, $value) {
+    $query = "
+      SELECT
+        $attr
+      FROM
+        user
+      WHERE
+        $attr = :value
+    ";
+    $queryParams = array(
+      ':value' => $value
+    );
+    $row = Database::exec($query, $queryParams)[0];
+    if (empty($row))  {
+      return 'Available';
+    } else  {
+      return 'Not Available';
+    }
+  }
+}
+
+if ($_GET['username'])  {
+  $exist = RegisterController::isExist('username', $_GET['username']);
+  header('Content-type: text/plain');
+  echo $exist;
+}
+
+if ($_GET['email'])  {
+  $exist = RegisterController::isExist('email', $_GET['email']);
+  header('Content-type: text/plain');
+  echo $exist;
 }
 
 if ($_POST['Register']) {

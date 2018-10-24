@@ -9,7 +9,6 @@
 		<title>Register</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pathway+Gothic+One" rel="stylesheet">
 		<link rel="stylesheet" href="../../public/css/login-register.css" type="text/css"/>
-    <script src="../../../public/js/Register.js"></script>
 	</head>
 	<body>
     <div class="container">
@@ -22,10 +21,12 @@
         <div class="form-input-attr">
           <label for="username">Username</label>
           <input type="text" id="username" name="username">
+          <div class="status-username"></div>
         </div>
         <div class="form-input-attr">
           <label for="email">Email</label>
           <input type="text" id="email" name="email">
+          <div class="status-email"></div>
         </div>
         <div class="form-input-attr">
           <label for="password">Password</label>
@@ -51,6 +52,6 @@
         </div>
       <form>
     </div>
+    <script src="../../public/js/Register.js"></script>
   </body>
 </html>
-
