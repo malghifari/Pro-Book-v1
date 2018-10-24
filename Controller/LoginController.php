@@ -20,8 +20,7 @@ class LoginController  {
     );
     $user = Database::exec($query, $queryParams)[0];
     if ($user['password'] === $_POST['password']) {
-      unset($user['password']);
-      $_SESSION['user'] = $user;
+      setcookie('username', $user['username'], 0, '/');
       $header = "Location: " . Config::APP_URL . "/views/pages/Search.php";
     } else  {
       $header = "Location: " . Config::APP_URL . "/views/pages/Login.php";
