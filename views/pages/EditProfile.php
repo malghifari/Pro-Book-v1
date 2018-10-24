@@ -14,7 +14,9 @@
 <html>
 	<head>
 		<title>Edit Profile</title>
-		<link rel="stylesheet" type="text/css" href="../../public/css/editProfile.css">
+		<link rel="stylesheet" href="../../public/css/global.css" type="text/css"/>
+		<link rel="stylesheet" href="../../public/css/header.css" type="text/css"/>
+		<link rel="stylesheet" type="text/css" href="../../public/css/edit-profile.css">
 	</head>
 	<body>
 		<div class = frame>

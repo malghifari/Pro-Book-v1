@@ -33,7 +33,9 @@ class SearchController  {
     <head>
       <meta charset="utf-8" />
       <title>Search Result</title>
-      <link rel="stylesheet" href="../../public/css/search_result.css" type="text/css"/>
+      <link rel="stylesheet" href="../../public/css/global.css" type="text/css"/>
+			<link rel="stylesheet" href="../../public/css/header.css" type="text/css"/>
+      <link rel="stylesheet" href="../../public/css/search-result.css" type="text/css"/>
     </head>
     <body>
         <div class = "frame">

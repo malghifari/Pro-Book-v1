@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  color:	#FF8C00;
+  font-size: 38pt;
+  font-family: 'Dosis', sans-serif;
+}
+
+.frame {
+  position: relative;
+  width: 	45%;
+  margin: 	auto;
+}
