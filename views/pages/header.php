@@ -17,9 +17,15 @@
                 <button class="logout" type="submit" ><i class = "fas fa-power-off" style = "font-size : 25px";></i></button>
             </div>
             <div class="navbar">
-                <a class="active" href="#">Browse</a> 
-                <a href="#">History</a> 
-                <a href="Profile.php">Profile</a> 
+                <a class="active" href="#">
+                    Browse
+                </a> 
+                <a href="#">
+                    History
+                </a> 
+                <a href="Profile.php">
+                    Profile
+                </a> 
             </div>
         </div>
     </body>

@@ -3,6 +3,7 @@
 	include '../../Controller/ProfileController.php';
 	// echo (ProfileController::fetchUser('alghi'));
 	$profile = ProfileController::fetchUser($_SESSION['username']);
+	include 'header.php';
 ?>
 
 <!DOCTYPE html>
