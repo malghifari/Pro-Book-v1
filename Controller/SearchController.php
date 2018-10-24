@@ -1,5 +1,6 @@
 <?php
-
+include('header.php');
+require_once(Config::DOCUMENT_ROOT . '/views/pages/header.php');
 session_start();
 
 if (class_exists('Config'))  {

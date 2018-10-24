@@ -1,6 +1,7 @@
 <?php
   require_once('../../Config/Config.php');
   include('header.php');
+  require_once(Config::DOCUMENT_ROOT . '/views/pages/header.php');
   session_start();
 ?>
 

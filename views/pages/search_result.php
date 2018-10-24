@@ -1,6 +1,6 @@
 <?php
   require_once('../../Config/Config.php');
-  require_once('../includes/Header.php');
+  require_once('header.php');
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +17,3 @@
     </body>
 </html>
 
-<?php
-  require_once('../../Controller/SearchController.php');
-?>
