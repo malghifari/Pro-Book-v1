@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 if (class_exists('Config'))  {
@@ -9,20 +10,29 @@ if (class_exists('Config'))  {
 
 class LoginController  {
   public static function login()  {
-    $query = "SELECT * FROM user";
-    $users = Database::exec($query);
-    $header = "Location: " . Config::APP_URL . "/views/pages/Login.php";
-    foreach ($users as $user) {
-      if ($_POST['username'] === $user['username'] && $_POST['password'] === $user['password']) {
-        $_SESSION['username'] = $_POST['username'];
-        $header = "Location: " . Config::APP_URL . "/views/pages/Search.php";
-        break;
-      }
+    $query = "
+      SELECT * 
+      FROM user
+      WHERE
+        username = :username";
+    $queryParams = array(
+      ':username' => $_POST['username']
+    );
+    $user = Database::exec($query, $queryParams)[0];
+    if ($user['password'] === $_POST['password']) {
+      unset($user['password']);
+      $_SESSION['user'] = $user;
+      $header = "Location: " . Config::APP_URL . "/views/pages/Search.php";
+    } else  {
+      $header = "Location: " . Config::APP_URL . "/views/pages/Login.php";
     }
     header($header);
+    die();
   }
 }
 
-LoginController::login();
+if ($_POST['Login'])  {
+  LoginController::login();
+}
 
 ?>

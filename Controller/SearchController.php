@@ -1,8 +1,12 @@
 <?php
 
-require_once('../Model/Database.php');
-
 session_start();
+
+if (class_exists('Config'))  {
+    require_once(Config::DOCUMENT_ROOT . '/Model/Database.php');
+} else  {
+    require_once('../Model/Database.php');
+}
 
 class SearchController  {
     public static function search(){
@@ -21,7 +25,6 @@ class SearchController  {
     }
 }
 
-
 $sql = SearchController::search();
 
 if (sizeof($sql) > 0) {
@@ -35,6 +38,5 @@ if (sizeof($sql) > 0) {
 } else {
     echo "0 results";
 }
-
 
 ?>
