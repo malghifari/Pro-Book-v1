@@ -1,0 +1,59 @@
+.tabcontent {
+    background-color: rgb(0,174,239);
+    padding-top: 0px;
+}
+
+.frame {
+	position: relative;
+	width: 	45%;
+	height: 300px;	
+	margin: 	auto;
+}
+
+.logout {
+    float: right;
+    right: 51%;
+    padding: 46px 46px;
+    background: rgb(242, 102,0);
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    border-radius: 0px;
+
+
+}
+
+.navbar {
+    width: 100%;
+    background-color:rgb(0,148,204);
+    overflow: auto;
+  }
+  
+  .navbar a {
+    float: left;
+    padding: 17px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    width: 23.5%; /* Four links of equal widths */
+    text-align: center;
+  }
+  
+  .navbar a:hover {
+    background-color: yellow;
+  }
+  
+  .navbar a.active {
+    background-color: rgb(242, 102,0);
+  }
+  
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
