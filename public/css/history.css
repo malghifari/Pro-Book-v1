@@ -1,0 +1,64 @@
+.table {
+}
+
+.row {
+	height: 120px; 
+	background-color: white;
+	display: flex;
+  	align-items: stretch;
+	/*border: solid black 1px;  	*/
+	margin-left: 10px;
+}
+
+.avatar-collumn {
+	width: 20%;
+	padding: auto;
+}
+
+.avatar {
+	border: solid black 1px;
+	width: 90%;
+	height: 90%;
+	margin: 5%;
+}
+
+.description {
+	width: 50%;
+	flex-grow: 8;
+}
+
+.description > p {
+	margin-top: 0px;
+	margin-left: 5px;
+	font-family: calibri;
+}
+
+.details {
+	width: 30%;
+}
+
+.details > p {
+	margin-top: 5px;
+	font-family: calibri;
+}
+
+.history-header {
+	font-size: 36pt;
+	font-family: calibri;
+	color: rgb(242,102,0);
+	margin-left: 15px;
+	margin-bottom: 5px;
+}
+
+td {
+	width: 33.33%;
+}
+
+h2 {
+	font-size: 20pt;
+	font-family: calibri;
+	color: rgb(242,102,0);
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+}

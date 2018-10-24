@@ -36,10 +36,12 @@
 	width: 	30px;
 }
 
-h1 {
-	color:#f26600; 
-	font-size:28pt; 
-	font-family: 'Open Sans', sans-serif;
+.profile-header {
+	font-size: 36pt;
+	font-family: calibri;
+	color: rgb(242,102,0);
+	margin-left: 15px;
+	margin-bottom: 5px;
 }
 
 h2 {
