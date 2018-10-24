@@ -1,5 +1,6 @@
 <?php
   require_once('../../Config/Config.php');
+  include 'header.php';
 ?>
 
 <!DOCTYPE html>
@@ -10,4 +11,6 @@
 		<link rel="stylesheet" href="../../public/css/search_result.css"/>
     </head>
     <body>
-        <h1>Search Result</h1>
+        <h1 style = "font-family: 'Dosis', sans-serif";>Search Result</h1>
+        
+    </body>
