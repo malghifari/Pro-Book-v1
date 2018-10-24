@@ -12,10 +12,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"/>
     <body>
         <div class = "frame">
-            <div class ="tabcontent">
+            <div class = "tabcontent">
                 <p class = "detail">
                     Pro<span class = "book">-Book</span>
                 </p>
+                <div class = "hi-username">
+                    Hi, tayo
+                </div>
                 <button class="logout" type="submit" ><i class = "fas fa-power-off" style = "font-size : 25px";></i></button>
             </div>
             <div class="navbar">
