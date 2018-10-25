@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 25, 2018 at 08:56 AM
+-- Generation Time: Oct 25, 2018 at 09:21 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -59,17 +59,18 @@ CREATE TABLE `order` (
   `id-book` int(11) NOT NULL,
   `date` date NOT NULL,
   `quantity` int(11) NOT NULL,
-  `order-no` int(11) NOT NULL
+  `order-no` int(11) NOT NULL,
+  `flag` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `order`
 --
 
-INSERT INTO `order` (`id-order`, `username`, `id-book`, `date`, `quantity`, `order-no`) VALUES
-(1108, '@tayotayo', 11102, '2018-07-21', 0, 0),
-(1120, '@ivanf', 11102, '2018-09-01', 0, 0),
-(1145, 'alghi', 1114, '2018-08-17', 0, 0);
+INSERT INTO `order` (`id-order`, `username`, `id-book`, `date`, `quantity`, `order-no`, `flag`) VALUES
+(1108, '@tayotayo', 11102, '2018-07-21', 0, 0, 0),
+(1120, '@ivanf', 11102, '2018-09-01', 0, 0, 0),
+(1145, '@ivanf', 1114, '2018-08-17', 0, 0, 1);
 
 -- --------------------------------------------------------
 
