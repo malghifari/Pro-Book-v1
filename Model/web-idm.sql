@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 25, 2018 at 08:22 AM
+-- Generation Time: Oct 25, 2018 at 08:56 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -82,19 +82,20 @@ CREATE TABLE `review` (
   `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `id-book` int(11) NOT NULL,
   `username` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `rating` int(11) NOT NULL
+  `rating` int(11) NOT NULL,
+  `id-order` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `review`
 --
 
-INSERT INTO `review` (`id-review`, `content`, `id-book`, `username`, `rating`) VALUES
-(12340, 'wah, gile deh ... penuh hikmah banget nih buku. bahwa kita -manusia- saling berhubungan satu dengan yang lainnya. kita menjadi sebab dan akibat dari perjalanan atau siklus hidup seseorang. ', 1114, '@ivanf', 4),
-(12342, 'Jujur ini buku pertama Tere Liye yang saya baca :)\r\n', 11122, '@tayotayo', 3),
-(12343, 'Ini buku penulis ini yg pertama gw baca. Setelah sebelumnya banyak yg recommend Hafalan Delisa. Luar biasa.', 1118, '@ivanf', 5),
-(12345, 'Seperti ada scene di Film India Mohabbatein... Pas Ray dirumah sakit melukai tangannya dengan pecahan kaca biar di obati sama si cewe...', 11102, '@tayotayo', 5),
-(12349, 'Ceritanya menyentuh perasaan namun banyak manfaat yang dapat saya ambil.', 11102, '@tayotayo', 4);
+INSERT INTO `review` (`id-review`, `content`, `id-book`, `username`, `rating`, `id-order`) VALUES
+(12340, 'wah, gile deh ... penuh hikmah banget nih buku. bahwa kita -manusia- saling berhubungan satu dengan yang lainnya. kita menjadi sebab dan akibat dari perjalanan atau siklus hidup seseorang. ', 1114, '@ivanf', 4, 1108),
+(12342, 'Jujur ini buku pertama Tere Liye yang saya baca :)\r\n', 11122, '@tayotayo', 3, 0),
+(12343, 'Ini buku penulis ini yg pertama gw baca. Setelah sebelumnya banyak yg recommend Hafalan Delisa. Luar biasa.', 1118, '@ivanf', 5, 1145),
+(12345, 'Seperti ada scene di Film India Mohabbatein... Pas Ray dirumah sakit melukai tangannya dengan pecahan kaca biar di obati sama si cewe...', 11102, '@tayotayo', 5, 1108),
+(12349, 'Ceritanya menyentuh perasaan namun banyak manfaat yang dapat saya ambil.', 11102, '@tayotayo', 4, 1120);
 
 -- --------------------------------------------------------
 
