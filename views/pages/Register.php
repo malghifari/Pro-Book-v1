@@ -7,7 +7,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Register</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pathway+Gothic+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pathway+Gothic+One|Varela+Round|M+PLUS+Rounded+1c" rel="stylesheet">
 		<link rel="stylesheet" href="../../public/css/login-register.css" type="text/css"/>
 	</head>
 	<body>
