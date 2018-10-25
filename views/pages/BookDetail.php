@@ -6,23 +6,28 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>Login</title>
+		<title>Detail</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pathway+Gothic+One" rel="stylesheet">
-		<link rel="stylesheet" href="../../public/css/book-detail.css" type="text/css"/>
+		<link rel="stylesheet" href="../../public/css/global.css" type="text/css"/>
+		<link rel="stylesheet" href="../../public/css/header.css" type="text/css"/>
+    <link rel="stylesheet" href="../../public/css/book-detail.css" type="text/css"/>
 	</head>
   <body>
-    <div class="container">
-      <div class="flex-container">
-        <div class="description">
-          <h1>NOTA HIDUP</h1>
-            <h6>Light R. D. B.</h6>
-            <p>Buku ajaib yang berisi nama-nama orang terpilih. <br>Jika namamu tertulis di buku ini maka kamu adalah salah satu orang yang beruntung</p>
-          </div>
-        <div class="image-rating">
-          <img src="../../mocks/tayo.jpg" alt="foto-buku">
-          <div class="rating">
-          </div>
-        </div>               
+    <div class="frame">
+      <?php include Config::DOCUMENT_ROOT . "/views/includes/Header.php"?>
+      <div>
+        <div class="flex-container">
+          <div class="description">
+            <h1>NOTA HIDUP</h1>
+              <h6>Light R. D. B.</h6>
+              Buku ajaib yang berisi nama-nama orang terpilih. <br>Jika namamu tertulis di buku ini maka kamu adalah salah satu orang yang beruntung
+            </div>
+          <div class="image-rating">
+            <img src="../../public/img/tayo.jpg" alt="foto-buku">
+            <div class="rating">
+            </div>
+          </div>               
+        </div>
       </div>
       <form action="<?php echo Config::APP_URL . '/Controller/BookDetailController.php' ?>" method="post">
         <h3>Order</h3>
@@ -55,7 +60,7 @@
               </div>
               <div class='review'>
                 <h6>".'alghi'."</h6>
-                <p>".'jadi gini ini tes doang blablablablbalblablbla'."</p>
+                ".'jadi gini ini tes doang blablablablbalblablbla'."
               </div>
               <div class='rating'>
                 RATING

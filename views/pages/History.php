@@ -6,6 +6,8 @@
 <html>
 	<head>
 		<title>History</title>
+		<link rel="stylesheet" href="../../public/css/global.css" type="text/css"/>
+		<link rel="stylesheet" href="../../public/css/header.css" type="text/css"/>
 		<link rel="stylesheet" type="text/css" href="../../public/css/history.css">
 	</head>
 	<body>

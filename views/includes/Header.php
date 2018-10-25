@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="../../public/css/header.css"/>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"/>
 
 <div class = "tabcontent">

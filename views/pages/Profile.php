@@ -14,6 +14,8 @@
 <html>
 	<head>
 		<title>Profile</title>
+		<link rel="stylesheet" href="../../public/css/global.css" type="text/css"/>
+		<link rel="stylesheet" href="../../public/css/header.css" type="text/css"/>
 		<link rel="stylesheet" type="text/css" href="../../public/css/profile.css">
 	</head>
 	<body>
