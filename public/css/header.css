@@ -8,14 +8,19 @@
 .logout {
     right: 0px;
     top:0px;
-    height: 60px;
-    width: 60px;
     background: rgb(242, 102,0);
     color: white;
     border: 1px solid grey;
     cursor: pointer;
     position: absolute;
+    height: 60px;
+    width: 60px;
+}
 
+.logout-button {
+    height: 40px;
+    width: 40px;
+    margin: 10px;
 }
 
 .hi-username {
