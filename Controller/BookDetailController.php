@@ -10,6 +10,7 @@ class BookDetailController  {
   public static function bookdetail()  {
     $query = "
       SELECT 
+        `id-book`,
         username, 
         rating, 
         content, 
@@ -24,9 +25,9 @@ class BookDetailController  {
               `user`
               USING (`username`)
       WHERE
-        title = :title;";
+        `id-book` = :idbook;";
     $queryParams = array(
-      ':title' => 'Matematika'
+      ':idbook' => $_GET['id-book']
     );
     return Database::exec($query, $queryParams);
   }
