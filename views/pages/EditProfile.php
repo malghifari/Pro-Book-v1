@@ -95,7 +95,6 @@
 			  <br>
 			  <br>
 			  <div id="back-button"><a href="Profile.php" style="text-decoration: none;"> Back </a></div>
-			  
 			  <input type="submit" name="save" id="save-button" value="Save">
 			</form> 
 		</div>
