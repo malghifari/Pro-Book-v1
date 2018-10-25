@@ -11,10 +11,10 @@
     include Config::DOCUMENT_ROOT . '/Model/Database.php';
 
     class HistoryController {
-        public static function fetchOrder($username) {
-            $query = 'SELECT `id-book`, title, avatar, `id-order`, username, date, quantity, `order-no`, flag 
+        public static function fetchOrder() {
+            $query = "SELECT `id-book`, title, avatar, `id-order`, username, date, quantity, `order-no`, flag 
                       FROM book natural join `order`
-                      WHERE username = $username;';
+                      WHERE username ='". $_COOKIE['username']."'";
             $orders = Database::exec($query);
             return $orders;
         }

@@ -19,18 +19,7 @@
 	margin: 5%;
 }
 
-.review-button {
-	padding: 3px 30px 3px !important;
-	border: none;
-	background-color: #0094cc;
-	color: white;
-	font-size: 15pt;
-	border-radius: 5px;
-	text-align: center;
-	position: absolute;
-	right: 	15px;
-	font-family: calibri;
-}
+
 
 .description {
 	width: 50%;
@@ -41,6 +30,22 @@
 	margin-top: 0px;
 	margin-left: 5px;
 	font-family: calibri;
+}
+
+button {
+    float: right;
+    right: 51%;
+    width: 90px;
+    height: 30px;
+    padding: 0px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid #2196F3;
+    border-left: none;
+    cursor: pointer;
+	border-radius: 3px;
+	font-family:calibri;
 }
 
 .details {

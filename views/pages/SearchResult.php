@@ -16,9 +16,9 @@ class SearchController  {
         } else {
             echo "not assign";
         }
-        $query = "SELECT 'id-book', title, author, description, AVG(rating) AS rating, COUNT(username) AS user  
+        $query = "SELECT `id-book`,avatar, title, author, description, AVG(rating) AS rating, COUNT(username) AS user  
                   FROM book NATURAL JOIN review
-                  GROUP BY book.title";
+                  GROUP BY `id-book`";
         return $result = Database::exec($query);
     }
 
@@ -67,11 +67,11 @@ class SearchController  {
                 while($i < sizeof($result)) {
                     $row = $result[$i];
                     echo "
-                    <div><img src='tayo.jpg' width='100px' height='100px' align='left'>
+                    <div><img src=". $row["avatar"] ." width='100px' height='100px' align='left'>
                         <b class='title'>". $row["title"]. "</b><br><br>
                         <b class='author'>" . $row["author"] . "- ".number_format((float)$row["rating"],1,'.','')."/5.0 (".$row["user"]." votes)
                         </b><br><span class='description'>". $row["description"]."</span><br>
-                        <a href='BookDetail.php'><button type='submit' class ='button'>Detail</button></a><br><br><br><br>
+                        <a href='BookDetail.php/id=". $row["id-book"]."'><button type='submit' class ='button'>Detail</button></a><br><br><br><br>
                     </div>";
                     $i++;
               }
