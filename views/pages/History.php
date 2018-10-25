@@ -22,7 +22,7 @@
                 foreach ($orders as $order) {
                     if($order['flag'] == 0) {
                         $Reviewed = 'Belum direview';
-                        $Reviewbutton = '<a href="" class="review-button"><button type="submit" class ="button">Review</button></a>';
+                        $Reviewbutton = '<a href="Review.php" class="review-button"><button type="submit" class ="button">Review</button></a>';
                     } else {
                         $Reviewed = 'Anda sudah memberikan review';
                         $Reviewbutton = '';
