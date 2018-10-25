@@ -20,39 +20,35 @@
 			<?php
                 $orders = HistoryController::fetchOrder($_COOKIE['username']);
                 foreach ($orders as $order) {
-                    if($order['flag'] == 0) {
+                    if($order['flag'] == 1) {
                         $Reviewed = 'Belum direview';
-                        $Reviewbutton = '';
+                        $Reviewbutton = '<a href="" class="review-button">Review</a>';
                     } else {
                         $Reviewed = 'Anda sudah memberikan review';
-                        $Reviewbutton = '<a href="" class="review-button"></a>';
+                        $Reviewbutton = '';
                     }
 
-                    echo "    <div>
+                    echo    "<div>
                                 <div class='row'>
                                     <div class='avatar-collumn'>
                                         <div class='avatar'>
-                                            <img src='$order['avatar']\'>
+                                            <img src=${order['avatar']}>
                                         </div>
                                     </div>
                                     <div class='description'>
-                                        <h2>$order['book-name']</h2>
-                                        <p>Jumlah: $order['quantity']</p><br>
+                                        <h2>${order['title']}</h2>
+                                        <p>Jumlah: ${order['quantity']}</p><br>
                                         <p>$Reviewed</p>
                                     </div>
                                     <div class='details'>
-                                        <p>$order['date']</p><br>
-                                        <p>Nomor Order : #$order['order-no']</p>
-                                        $Review-button
+                                        <div class='date'>${order['date']}</div>
+                                        <div class='date'>Nomor Order : #${order['order-no']}</div>
+                                        $Reviewbutton
                                     </div>
                                 </div>
-                            </div>"
+                            </div>";
                 }
             ?>
-
-
-
-
 		</div>
 	</body>
 </html>

@@ -3,7 +3,7 @@
 	background-color: white;
 	display: flex;
   	align-items: stretch;
-	/*border: solid black 1px;  	*/
+	border: solid black 1px;
 	margin-left: 10px;
 }
 
@@ -17,6 +17,12 @@
 	width: 90%;
 	height: 90%;
 	margin: 5%;
+	overflow: hidden;
+}
+
+.avatar > img {
+	width: 100%;
+	height: auto;
 }
 
 .review-button {
@@ -29,7 +35,9 @@
 	text-align: center;
 	position: absolute;
 	right: 	15px;
+	bottom: 15px;
 	font-family: calibri;
+	text-decoration: none;
 }
 
 .description {
@@ -45,6 +53,8 @@
 
 .details {
 	width: 30%;
+	padding-top: 10px;
+	padding-right: 15px;
 }
 
 .details > p {
@@ -58,6 +68,10 @@
 	color: rgb(242,102,0);
 	margin-left: 15px;
 	margin-bottom: 5px;
+}
+
+.date {
+	text-align: right;
 }
 
 td {

@@ -12,11 +12,10 @@
 
     class HistoryController {
         public static function fetchOrder($username) {
-            $query = 'SELECT `id-book`, title, avatar, `id-order`, username, date, quantity, `order-no`, flag 
+            $query = "SELECT `id-book`, title, avatar, `id-order`, username, date, quantity, `order-no`, flag 
                       FROM book natural join `order`
-                      WHERE username = $username;';
-            $orders = Database::exec($query);
-            return $orders;
+                      WHERE username = '".$username."';";
+            return Database::exec($query);
         }
     }
 ?>
