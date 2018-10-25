@@ -12,13 +12,13 @@
     </a>
 </div>
 <div class="navbar">
-    <a href="Search.php">
-        BROWSE
-    <a href="History.php">
-        HISTORY
+    <a href="Search.php" <?php if ($_SESSION['page']==='Search') {echo "class='active'";}?> >
+        B<span class="navname">ROWSE</span>
+    <a id="history" href="History.php" <?php if ($_SESSION['page']==='History') {echo "class='active'";}?> >
+        H<span class="navname">ISTORY</span>    
     </a> 
-    <a href="Profile.php">
-        PROFILE
+    <a href="Profile.php" <?php if ($_SESSION['page']==='Profile') {echo "class='active'";}?>>
+        P<span class="navname">ROFILE</span>    
     </a> 
 </div>
 

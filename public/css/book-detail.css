@@ -1,7 +1,7 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Varela Round', 'Open Sans';
   font-size: 12px;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
 }
 
 .flex-container {
@@ -10,6 +10,8 @@ body {
 
 form  {
   text-align: left;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 #order-button {
@@ -20,13 +22,12 @@ h1 {
   margin: 0px;
 }
 
-h6 {
+h3 {
   margin: 0px;
 }
 
 .description  {
   text-align: left;
-  /* width: 70%; */
 }
 
 .image-rating  {
@@ -35,11 +36,14 @@ h6 {
 }
 
 img {
-  width: 80%;
+  width: 100%;
 }
 
 td {
 	text-align: left;
-	font-family: calibri;
-	font-size: 	20pt;
+}
+
+.desc  {
+  margin: 0;
+  margin-top: 20px;
 }

@@ -1,7 +1,8 @@
 <?php
 	include '../../Config/Config.php';
 	include '../../Controller/ProfileController.php';
-	// echo (ProfileController::fetchUser('alghi'));
+	session_start();
+	$_SESSION['page'] = 'Profile';
 	if (empty($_COOKIE['username'])) {
 		header('Location: Login.php');
 		die();

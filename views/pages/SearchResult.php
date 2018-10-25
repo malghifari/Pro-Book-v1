@@ -2,7 +2,7 @@
   require_once('../../Config/Config.php');
 
   session_start();
-
+  $_SESSION['page'] = 'Search';
   if (class_exists('Config'))  {
       require_once(Config::DOCUMENT_ROOT . '/Model/Database.php');
   } else  {

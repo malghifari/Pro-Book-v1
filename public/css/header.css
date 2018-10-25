@@ -22,7 +22,7 @@
   position: absolute;
   right:70px;
   top: 32%;
-  font-size: 15pt;
+  font-size: 12pt;
   text-decoration: underline;
 }
 
@@ -30,9 +30,12 @@
   background-color:rgb(0,148,204);
   overflow: auto;
   display: flex;
-  font-family: calibri;
   font-size: 20pt;
-  }
+}
+
+.navname  {
+  font-size: 15pt;
+}
   
 .navbar a {
   color: white;
@@ -41,9 +44,13 @@
   text-decoration: none;
   text-align: center;
   flex-grow: 1;
-  border: solid black 0.5pt;
 }
-  
+ 
+#history  {
+  border-left: solid black 1pt;
+  border-right: solid black 1pt;
+}
+
 .navbar a:hover {
   background-color: yellow;
 }
@@ -73,11 +80,9 @@ p {
 p.detail {
   color: rgb(242,216,0);
   font-size: 24pt;
-  font-family: calibri;
 }
 
 span.book {
   color: white;
   font-size: 24pt;
-  font-family: calibri;
 }
