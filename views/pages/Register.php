@@ -15,8 +15,9 @@
       <h1>REGISTER</h1>
       <form action="<?php echo Config::APP_URL . '/Controller/RegisterController.php' ?>" method="post">
         <div class="form-input-attr">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name">
+          <label for="nama">Name</label>
+          <input type="text" id="nama" name="name">
+          <div class="status-nama"></div>
         </div>
         <div class="form-input-attr">
           <label for="username">Username</label>
@@ -31,19 +32,22 @@
         <div class="form-input-attr">
           <label for="password">Password</label>
           <input type="password" id="password" name="password">
+          <div class="status-password"></div>
         </div>
         <div class="form-input-attr">
-          <label for="confirm-password">Confirm Password</label>
-          <input type="password" id="confirm-password" name="confirmPassword">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword">
+          <div class="status-confirmPassword"></div>
         </div>
         <div class="form-input-attr">
           <label for="address">Address</label>
           <textarea type="text" id="address" name="address"></textarea>
+          <div class="status-address"></div>
         </div>
         <div class="form-input-attr">
-          <label for="phone-number">Phone Number</label>
-          <input type="text" id="phone-number" name="phone-number">
-          <div class="status-phone-number"></div>
+          <label for="phoneNumber">Phone Number</label>
+          <input type="text" id="phoneNumber" name="phone-number">
+          <div class="status-phoneNumber"></div>
         </div>
         <div id="login-redirect">
           <a href="<?php echo Config::APP_URL . '/views/pages/Login.php' ?>">Already have an account?</a><br>
