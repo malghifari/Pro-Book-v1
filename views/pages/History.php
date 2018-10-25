@@ -2,7 +2,7 @@
 	session_start();
 	$_SESSION['page'] = 'History';
 	include '../../Config/Config.php';
-	include Config::DOCUMENT_ROOT . '/Controller/HistoryController.php'
+	require_once(Config::DOCUMENT_ROOT . '/Controller/HistoryController.php');
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@
 		<title>History</title>
 		<link rel="stylesheet" href="../../public/css/global.css" type="text/css"/>
 		<link rel="stylesheet" href="../../public/css/header.css" type="text/css"/>
-		<link rel="stylesheet" type="text/css" href="../../public/css/history.css">
+		<link rel="stylesheet" type="text/css" href="../../public/css/history.css"/>
 	</head>
 	<body>
 		<div class="frame">
@@ -23,11 +23,11 @@
                     if($order['flag'] == 1) {
                         $Reviewed = 'Belum direview';
                         $Reviewbutton = '<a href="" class="review-button">Review</a>';
+                        $Reviewbutton = '<a href="" class="review-button"><button type="submit" class ="button">Review</button></a>';
                     } else {
                         $Reviewed = 'Anda sudah memberikan review';
                         $Reviewbutton = '';
                     }
-
                     echo    "<div>
                                 <div class='row'>
                                     <div class='avatar-collumn'>

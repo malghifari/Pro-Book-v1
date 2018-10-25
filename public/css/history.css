@@ -51,6 +51,22 @@
 	font-family: calibri;
 }
 
+button {
+    float: right;
+    right: 51%;
+    width: 90px;
+    height: 30px;
+    padding: 0px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid #2196F3;
+    border-left: none;
+    cursor: pointer;
+	border-radius: 3px;
+	font-family:calibri;
+}
+
 .details {
 	width: 30%;
 	padding-top: 10px;
