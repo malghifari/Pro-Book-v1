@@ -43,6 +43,7 @@
         <div class="form-input-attr">
           <label for="phone-number">Phone Number</label>
           <input type="text" id="phone-number" name="phone-number">
+          <div class="status-phone-number"></div>
         </div>
         <div id="login-redirect">
           <a href="<?php echo Config::APP_URL . '/views/pages/Login.php' ?>">Already have an account?</a><br>
