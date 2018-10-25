@@ -8,7 +8,9 @@
         Hi, <?php echo $_COOKIE['username'];?>
     </div>
     <a href="<?php echo Config::APP_URL . '/Controller/LogoutController.php' ?>">
-        <button class="logout" type="submit" ><i class = "fas fa-power-off" style = "font-size : 25px";></i></button>
+        <div class="logout">
+            <img class="logout-button" src="../../public/img/logout-button.png">
+        </div>
     </a>
 </div>
 <div class="navbar">
