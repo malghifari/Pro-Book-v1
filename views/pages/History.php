@@ -1,5 +1,5 @@
 <?php
-
+    include '../../Config/Config.php';
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<div class="frame">
-			<?php include '../includes/Header.php'; ?>	
+            <?php include Config::DOCUMENT_ROOT . "/views/includes/Header.php"?>
 			<h1 class="history-header">History</h1>
 			<div>
 				<div class="row">
