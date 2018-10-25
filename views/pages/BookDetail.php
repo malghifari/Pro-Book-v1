@@ -15,17 +15,19 @@
   <body>
     <div class="frame">
       <?php include Config::DOCUMENT_ROOT . "/views/includes/Header.php"?>
-      <div class="flex-container">
-        <div class="description">
-          <h1>NOTA HIDUP</h1>
-            <h6>Light R. D. B.</h6>
-            <p>Buku ajaib yang berisi nama-nama orang terpilih. <br>Jika namamu tertulis di buku ini maka kamu adalah salah satu orang yang beruntung</p>
-          </div>
-        <div class="image-rating">
-          <img src="../../mocks/tayo.jpg" alt="foto-buku">
-          <div class="rating">
-          </div>
-        </div>               
+      <div>
+        <div class="flex-container">
+          <div class="description">
+            <h1>NOTA HIDUP</h1>
+              <h6>Light R. D. B.</h6>
+              Buku ajaib yang berisi nama-nama orang terpilih. <br>Jika namamu tertulis di buku ini maka kamu adalah salah satu orang yang beruntung
+            </div>
+          <div class="image-rating">
+            <img src="../../public/img/tayo.jpg" alt="foto-buku">
+            <div class="rating">
+            </div>
+          </div>               
+        </div>
       </div>
       <form action="<?php echo Config::APP_URL . '/Controller/BookDetailController.php' ?>" method="post">
         <h3>Order</h3>
@@ -58,7 +60,7 @@
               </div>
               <div class='review'>
                 <h6>".'alghi'."</h6>
-                <p>".'jadi gini ini tes doang blablablablbalblablbla'."</p>
+                ".'jadi gini ini tes doang blablablablbalblablbla'."
               </div>
               <div class='rating'>
                 RATING

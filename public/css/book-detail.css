@@ -4,13 +4,6 @@ body {
   letter-spacing: 1px;
 }
 
-.container  {
-  width: fit-content;
-  text-align: center;
-  margin: auto;
-  padding: 20px;
-}
-
 .flex-container {
   display: flex;
 }
@@ -23,15 +16,30 @@ form  {
   text-align: right;
 }
 
+h1 {
+  margin: 0px;
+}
+
+h6 {
+  margin: 0px;
+}
+
 .description  {
   text-align: left;
-  width: 300px;
+  /* width: 70%; */
 }
 
 .image-rating  {
-  width: 200px;
+  width: 30%;
+  text-align: right;
 }
 
 img {
   width: 80%;
+}
+
+td {
+	text-align: left;
+	font-family: calibri;
+	font-size: 	20pt;
 }
