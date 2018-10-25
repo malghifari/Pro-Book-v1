@@ -34,15 +34,10 @@
 			</div>
 			<h1 class="profile-header">My Profile</h1>
 			<table id="profileTable">
-			  <tr class="header">
-			  	<th style="width:10%;"></th>
-			    <th style="width:45%;"></th>
-			    <th style="width:45%;"></th>
-			  </tr>
 			  <tr>
-			    <td><img src="../../public/img/username-logo.png" class="logo"></td>
-			    <td>Username</td>
-			    <td><?php echo $profile["username"] ?></td>
+			    <td style="width:10%;"><img src="../../public/img/username-logo.png" class="logo"></td>
+			    <td style="width:45%;">Username</td>
+			    <td style="width:45%;"><?php echo $profile["username"] ?></td>
 			  </tr>
 			  <tr>
 			  	<td><img src="../../public/img/email-logo.png" class="logo"></td>

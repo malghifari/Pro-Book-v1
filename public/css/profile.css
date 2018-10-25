@@ -5,13 +5,14 @@
 }
 .avatar {
     vertical-align: middle;
-    display: block;
+		display: block;
+		margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    width: 200px;
-    height: 200px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
-    border: 10px solid #f2d800;
+    border: 5px solid #f2d800;
 }
 
 .upperBox {	
@@ -26,7 +27,7 @@
 }
 
 #profileTable {
-	margin-left: 	20px;
+	margin-left: 	50px;
 }
 
 #edit-profile-logo {
@@ -37,27 +38,28 @@
 }
 
 .profile-header {
-	font-size: 36pt;
-	font-family: calibri;
+	font-size: 20pt;
 	color: rgb(242,102,0);
 	margin-left: 15px;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
 }
 
 h2 {
 	position: relative;
 	text-align: center;
 	color: white;
-	font-size: 28pt;
-	font-family: calibri;
+	font-size: 20pt;
 }
 
 td {
 	text-align: left;
-	font-family: calibri;
-	font-size: 	20pt;
+	font-size: 	11pt;
 }
 
 body {
 	margin-top: 0;
+}
+
+tr	{
+	height: 30px;
 }

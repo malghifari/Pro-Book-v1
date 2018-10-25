@@ -9,7 +9,6 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Detail</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pathway+Gothic+One|Varela+Round" rel="stylesheet">
 		<link rel="stylesheet" href="../../public/css/global.css" type="text/css"/>
 		<link rel="stylesheet" href="../../public/css/header.css" type="text/css"/>
     <link rel="stylesheet" href="../../public/css/book-detail.css" type="text/css"/>
