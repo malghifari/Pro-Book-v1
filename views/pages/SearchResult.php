@@ -16,14 +16,12 @@ class SearchController  {
         } else {
             echo "not assign";
         }
-        $query = "SELECT DISTINCT 'id-book', title, author, avatar description FROM book NATURAL JOIN review WHERE title = '$title'";
+        $query = "SELECT 'id-book', title, author, description, AVG(rating) AS rating, COUNT(username) AS user  
+                  FROM book NATURAL JOIN review
+                  GROUP BY book.title";
         return $result = Database::exec($query);
     }
-    public static function input() {
-        $query = "INSERT INTO book(id-book,title,description,author,price)";
-        VALUES (1001, 'Matematika','go','kadarsah', 65000);
-        return $result = Database::exec($query);
-    }
+
 }
 
 ?>
@@ -40,28 +38,48 @@ class SearchController  {
     <body>
         <div class = "frame">
         <?php include Config::DOCUMENT_ROOT . "/views/includes/Header.php"?>
-          <h1>Search Result</h1>
-          <?php
+        <?php
               $sql = SearchController::search();
               if (sizeof($sql) > 0) {
                   // output data of each row
                   $i = 0;
+                  $sum = 0;
                   while($i < sizeof($sql)) {
                       $row = $sql[$i];
-                      echo "<br><b class='title'>". $row["title"]. "</b><br>
-                      <br><b class='author'>" . $row["author"] . "</b>
-                      <br><span class='description'>". $row["description"]."</span>";
-                      $i++;
-                      echo "<button type='submit' class ='button'>Detail
-                      </button>";
-                      echo "<br><br>";
+                      $string = "/ ".$_POST['title']."\b/i";
+                      $string2 = "/\\".$_POST['title']."\b/i";
+                      $retval = preg_match($string, $row["title"])||preg_match($string2, $row["title"]);
+                        if($retval===true) { 
+                            $result[$sum] = $row;
+                            $sum++;
+                        } 
+                        $i++;
                   }
               } else {
                   echo "0 results";
               }
 
+              echo "<h1 class='search'>Search Result<span class='result'>found <u>".$sum."</u> result(s)</span></h1>";
+              if ($sum == 0) {
+                  echo "Not Found";
+              } else {
+                $i = 0;
+                while($i < sizeof($result)) {
+                    $row = $result[$i];
+                    echo "
+                    <div><img src='tayo.jpg' width='100px' height='100px' align='left'>
+                        <b class='title'>". $row["title"]. "</b><br>
+                        <b class='author'>" . $row["author"] . "- ".number_format((float)$row["rating"],1,'.','')."/5.0 (".$row["user"]." votes)
+                        </b><br><span class='description'>". $row["description"]."</span><br>
+                        <a href='BookDetail.php'><button type='submit' class ='button'>Detail</button></a><br><br><br><br>
+                    </div>";
+                    $i++;
+              }
+            }
           ?>
           </div> 
     </body>
+
+
 </html>
 
