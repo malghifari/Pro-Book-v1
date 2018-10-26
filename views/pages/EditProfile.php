@@ -1,13 +1,14 @@
 <?php
 	include '../../Config/Config.php';
 	include '../../Controller/ProfileController.php';
+
 	session_start();
 	$_SESSION['page'] = 'Profile';
 	if (empty($_COOKIE['username'])) {
 		header('Location: Login.php');
 		die();
 	} else {
-		$profile = ProfileController::fetchUser($_COOKIE['username']);	
+		$profile = ProfileController::fetchUser($_COOKIE['username']);
 	}
 ?>
 
@@ -71,26 +72,34 @@
 			  		<td><img id="profile-picture" src="../../public/img/tayo.jpg"></td>
 			  		<td>
 			  			Update profile picture
-			  			<table>
-			  				<tr>
-			  					<td><textarea id="img-uploader" name="avatar" rows="1" cols="1"></textarea></td>
-			  					<td><input type="file" name="avatar"></td>
-			  				</tr>	
-			  			</table>
+                        <div class="form-image">
+                            <label  class="kotak" for="avatar"></label>
+                            <input type="file" name="avatar" id="avatar">
+                        </div>
 			  		</td>
 			  	</tr>
 			  	<tr>
 			  		<td>Name</td>
-			  		<td><input type="text" name="name" value="<?php echo htmlspecialchars($profile["name"]) ?>" ></td>
-			  	</tr>
+			  		<td>
+                        <input id="nama" type="text" name="name" value="<?php echo htmlspecialchars($profile["name"]) ?>" >
+                        <div class="status-nama"></div>
+                    </td>
+
 			  	<tr>
 			  		<td>Address</td>
-			  		<td><textarea name="address"><?php echo $profile["address"] ?></textarea></td>
+			  		<td>
+                        <textarea id="address" name="address"><?php echo $profile["address"] ?></textarea>
+                        <div class="status-address"></div>
+                    </td>
+
 			  	</tr>
 			  	<tr>
 			  		<td>Phone Number</td>
-			  		<td><input type="text" name="phone-number" value="<?php echo $profile["phone-number"] ?>" ></td>
-			  	</tr>
+			  		<td>
+                        <input id="phoneNumber" type="text" name="phone-number" value="<?php echo $profile["phone-number"] ?>" >
+                        <div class="status-phoneNumber"></div>
+                    </td>
+                </tr>
 			  </table>
 			  <br>
 			  <br>
@@ -98,5 +107,6 @@
 			  <input type="submit" name="save" id="save-button" value="Save">
 			</form> 
 		</div>
-	</body>
+        <script src="../../public/js/EditProfile.js"></script>
+    </body>
 </html>
