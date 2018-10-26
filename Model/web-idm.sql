@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 25, 2018 at 09:21 AM
+-- Generation Time: Oct 25, 2018 at 05:38 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -42,10 +42,10 @@ CREATE TABLE `book` (
 --
 
 INSERT INTO `book` (`id-book`, `title`, `description`, `author`, `price`, `avatar`) VALUES
-(1114, 'Buku Belajar, Mewarnai dan Menggambar', 'This book requires that you know a bit of HTML and CSS since it delves ... There are actually many ways to put text beside an image, in such a ...\r\n', 'Prof. Decraimber', 100000, 'tayo.jpg'),
-(1118, 'Web ', 'Buku referensi untuk pemograman berbasis WEB', 'Prof. Catur', 1000000, 'tayo.jpg'),
-(11102, 'Matematika Diskrit', 'Bahan Pendukung Untuk SMA', 'Prof. Ivan Fadillah', 765000, 'tayo.jpg'),
-(11122, 'Matematika', 'Buku pelajaran', 'Kadarsah', 65000, '');
+(1114, 'Buku Belajar, Mewarnai dan Menggambar', 'This book requires that you know a bit of HTML and CSS since it delves ... There are actually many ways to put text beside an image, in such a ...\r\n', 'Prof. Decraimber', 100000, 'gambar.jpg'),
+(1118, 'Web ', 'Buku referensi untuk pemograman berbasis WEB', 'Prof. Catur', 1000000, 'web.jpg'),
+(11102, 'Matematika Diskrit', 'Bahan Pendukung Untuk SMA', 'Prof. Ivan Fadillah', 765000, 'matdisk.jpg'),
+(11122, 'Matematika', 'Buku pelajaran', 'Kadarsah', 65000, 'math.jpg');
 
 -- --------------------------------------------------------
 
@@ -119,10 +119,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`username`, `name`, `email`, `password`, `address`, `phone-number`, `avatar`) VALUES
-('@dandyR', 'Dandy', 'dandi@itb.com', 'dandan', 'goreng', '0298082803808', 'email-logo.png'),
-('@ivanf', 'Iiven Fadillah', 'ifadillah90@gmail.com', 'goreng', 'Jl. Ganesha No. 7', '085261100940', 'address-logo.png'),
+('@dandyR', 'Dandy', 'dandi@itb.com', 'dandan', 'goreng', '0298082803808', 'avatar15.jpg'),
+('@ivanf', 'Aiven Fadillah', 'ifadillah90@gmail.com', 'goreng', 'Jl. Ganesha No. 7', '085261100940', 'ivan.jpg'),
 ('@tayotayo', 'Tayo the Little  Bus', 'tayo@littlebus.com', 'goreng', '120 garage street ', '081234567988', 'tayo.jpg'),
-('alghi', 'Mochamad Alghifari', 'alghi@gmail.com', 'qwerty', 'Bandung', '08888888888', '');
+('alghi', 'Mochamad Alghifari', 'alghi@gmail.com', 'qwerty', 'Bandung', '08888888888', 'avatar9.jpg');
 
 --
 -- Indexes for dumped tables

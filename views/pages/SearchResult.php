@@ -71,7 +71,7 @@ class SearchController  {
                         <b class='title'>". $row["title"]. "</b><br><br>
                         <b class='author'>" . $row["author"] . "- ".number_format((float)$row["rating"],1,'.','')."/5.0 (".$row["user"]." votes)
                         </b><br><span class='description'>". $row["description"]."</span><br>
-                        <a href='BookDetail.php/id=". $row["id-book"]."'><button type='submit' class ='button'>Detail</button></a><br><br><br><br>
+                        <a href='BookDetail.php?id-book=". $row["id-book"]."'><button type='submit' class ='button'>Detail</button></a><br><br><br><br>
                     </div>";
                     $i++;
               }
