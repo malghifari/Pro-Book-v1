@@ -30,6 +30,17 @@ function addressValidation(address) {
     return true;
 }
 
+function submitFile() {
+    document.getElementById("hidden-button").click();
+    addOnChangeProfilePictureName();
+}
+
+function addOnChangeProfilePictureName() {
+    document.getElementById('hidden-button').onchange = function () {
+        document.getElementById('file-name').value = this.files[0].name;
+    }
+}
+
 var form = document.querySelector('form');
 
 form.onsubmit = function()  {

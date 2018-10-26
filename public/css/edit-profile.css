@@ -66,18 +66,19 @@ td > textarea {
 	height: 30px;
 }
 
-.kotak {
-	width: 50%;
-	height: 10%px;
-	border: black solid 1px;
-	box-sizing: border-box;
-	text-align: right;
-}
-
 .form-image	{
 	display: flex;
 }
 
 #avatar	{
 	text-align: right;
+	width: 100%;
+}
+
+#hidden-button {
+	display: none;
+}
+
+#file-name {
+	width: 100%;
 }
