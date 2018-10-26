@@ -13,8 +13,12 @@ class BookDetailController  {
         `id-book`,
         username, 
         rating, 
-        content, 
-        user.avatar 
+        content,
+        book.avatar as bookAvatar,
+        user.avatar,
+        title,
+        description,
+        author
       FROM 
         `book` 
         JOIN 
@@ -31,8 +35,41 @@ class BookDetailController  {
     );
     return Database::exec($query, $queryParams);
   }
+  public static function order()  {
+    $query = "
+      INSERT INTO 
+        `order`(
+          username, 
+          `id-book`, 
+          date, 
+          quantity
+        )
+      VALUES(
+        :username,
+        :idbook,
+        NOW(),
+        :quantity
+      )";
+    $queryParams = array(
+      ':username' => $_POST['username'],
+      ':idbook' => $_POST['id-book'],
+      ':quantity' => $_POST['quantity']
+    );
+    Database::exec($query, $queryParams);
+    $query2 = "
+      SELECT 
+        LAST_INSERT_ID();
+      ";
+    return Database::exec($query2);
+  }
 }
 
-$reviews = BookDetailController::bookdetail();
+if ($_POST)  {
+  $idorder = BookDetailController::order()[0]['LAST_INSERT_ID()'];
+  header('Content-type: text/plain');
+  echo $idorder;
+} else  {
+  $reviews = BookDetailController::bookdetail();
+}
 
 ?>

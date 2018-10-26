@@ -147,35 +147,33 @@ form.address.onchange = function()  {
 }
 
 form.onsubmit = function()  {
-  if (!nameValidation(form.nama)) {
-    form.name.focus();
-    return false;
-  }
-  else if (!usernameValidation(form.username)) {
-    form.username.focus();
-    return false;
-  }
-  else if (!emailValidation(form.email)) {
-    form.email.focus();
-    return false;
-  } 
-  else if (!passwordValidation(form.password)) {
-    form.password.focus();
-    return false;
-  }
-  else if (!confirmPasswordValidation(form)) {
-    form.confirmPassword.focus();
-    return false;
-  }
-  else if (!phoneNumberValidation(form.phoneNumber)) {
-    form.phoneNumber.focus();
-    return false;
-  }
-  else if (!addressValidation(form.address)) {
-    form.address.focus();
-    return false;
-  }
-  else {
+  if (nameValidation(form.nama) && usernameValidation(form.username) &&
+    emailValidation(form.email) && passwordValidation(form.password) &&
+    confirmPasswordValidation(form.confirmPassword) && phoneNumberValidation(form.phoneNumber) && 
+    addressValidation(form.address))  {
     return true;
+  } else  {
+    if (!phoneNumberValidation(form.phoneNumber)) {
+      form.phoneNumber.focus();
+    }
+    if (!addressValidation(form.address)) {
+      form.address.focus();
+    }
+    if (!confirmPasswordValidation(form)) {
+      form.confirmPassword.focus();
+    }
+    if (!passwordValidation(form.password)) {
+      form.password.focus();
+    }
+    if (!emailValidation(form.email)) {
+      form.email.focus();
+    } 
+    if (!usernameValidation(form.username)) {
+      form.username.focus();
+    }
+    if (!nameValidation(form.nama)) {
+      form.name.focus();
+    }
+    return false;  
   }
 }
