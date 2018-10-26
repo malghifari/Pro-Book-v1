@@ -44,13 +44,15 @@ class BookDetailController  {
           username, 
           `id-book`, 
           date, 
-          quantity
+          quantity,
+          flag
         )
       VALUES(
         :username,
         :idbook,
         NOW(),
-        :quantity
+        :quantity,
+        1
       )";
     $queryParams = array(
       ':username' => $_POST['username'],

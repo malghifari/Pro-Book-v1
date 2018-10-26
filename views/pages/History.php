@@ -42,7 +42,7 @@
                                     </div><br>
                                     <div class='details'>
                                         <div class='date'>${order['date']}</div>
-                                        <div class='date'>Nomor Order : #${order['order-no']}</div>
+                                        <div class='date'>Nomor Order : #${order['id-order']}</div>
                                     </div><br>
                                 </div>
                                 <br><br>
