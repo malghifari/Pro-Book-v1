@@ -1,8 +1,15 @@
-<center> # Tugas 1 IF3110 Pengembangan Aplikasi Berbasis Web </center>
+<center><div><b> # Tugas 1 IF3110 Pengembangan Aplikasi Berbasis Web <b> </div> </center>
 
-<center> ## Membuat sebuah Website Toko Buku ##</center>
+<center><b> ## Membuat sebuah Website Toko Buku <b></center>
 
 
+OLEH 
+
+<b> KELOMPOK -IDM <b>
+
+M. Alghifari - 13516038'
+Dandy Arif Rahman - 13516128
+Ivan Fadillah - 13516128
 
 
 
