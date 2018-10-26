@@ -1,6 +1,9 @@
 # Tugas 1 IF3110 Pengembangan Aplikasi Berbasis Web
 
 Membuat sebuah Website Toko Buku
+
+
+
 ## Deskripsi Singkat
 
 Pada tugas besar ini, Anda diminta untuk membuat aplikasi *toko buku online* **berbasis web** yang memungkinkan seorang pengguna untuk membeli dan memberi komentar pada buku. Untuk menggunakan aplikasi ini, seorang pengguna harus melakukan *login*. 
@@ -131,15 +134,30 @@ Jika ada pertanyaan silakan tanyakan lewat milis.
 *Setiap anggota kelompok diwajibkan untuk mengerjakan bagian tampilan dan fungsionalitas.*
 
 **Tampilan**
-1. Login : 1351xxxx, 135xxxxx
-2. Register : 135xxxxx
-3. Lanjutkan ...
+1. Login : 13516038
+2. Register : 13516038
+3. Search : 13516128
+4. Search Result :13516128
+5. Detail Book : 13516038
+6. Histori Book : 13516086
+7. Review Book : 13516128
+8. Header : 13516086, 13516128
+9. Profile: 13516086
+10. Edit Profile: 13516086
 
 **Fungsionalitas**
-1. Login : 135xxxxx, 135xxxxx
-2. Register : 135xxxxx
-3. Fungsionalitas : 135xxxxx,135xxxxx
-4. Lanjutkan...
+1. Login : 13516038
+2. Register : 13516038
+3. Search : 13516128
+4. Search Result :13516128
+5. Detail Book : 13516038
+6. Histori Book : 13516086
+7. Review Book : 13516128
+8. Header : 13516086, 13516128
+9. Profile: 13516086
+10. Edit Profile: 13516086
+11. Database.php : 13516038
+
 
 ## About
 
