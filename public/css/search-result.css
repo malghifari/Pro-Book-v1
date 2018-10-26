@@ -9,6 +9,8 @@
     color:	#FF8C00;
     font-size: 25pt;
     font-family: 'Dosis', sans-serif;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .title {
@@ -19,7 +21,6 @@
 }
 
 .author {
-<<<<<<< Updated upstream:public/css/search-result.css
     font-family: calibri;
     color: rgb(77, 77, 77);
     font-size:12pt;
@@ -30,31 +31,14 @@ span.result {
     font-family: calibri;
     color:rgb(77, 77, 77);
     font-size: 12pt;
-=======
-    font-family: 'Dosis', sans-serif;
-    color: black;
-    font-size:10pt;
-}
-
-span.result {
-    font-family: 'Dosis', sans-serif;
-    color:grey;
-    font-size: 11pt;
->>>>>>> Stashed changes:public/css/search_result.css
     text-align: right;
     font-weight: normal;
     float: right;
 }
 .description {
-<<<<<<< Updated upstream:public/css/search-result.css
     font-family: calibri;
     color:rgb(77, 77, 77);
     font-size:11pt;
-=======
-    font-family: 'Dosis', sans-serif;
-    color:grey;
-    font-size:10pt;
->>>>>>> Stashed changes:public/css/search_result.css
 }
 
 button {
@@ -70,4 +54,11 @@ button {
     border-left: none;
     cursor: pointer;
     border-radius: 3px;
+}
+
+img[Attributes Style] {
+    width: 90px;
+    height: 110px;
+    float: left;
+    vertical-align: top;
 }

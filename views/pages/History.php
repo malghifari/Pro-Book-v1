@@ -27,7 +27,7 @@
                         $Reviewed = 'Anda sudah memberikan review';
                         $Reviewbutton = '';
                     }
-                    echo    "<div>
+                    echo    "<br><br><div>
                                 <div class='row'>
                                     <div class='avatar-collumn'>
                                         <div class='avatar'>

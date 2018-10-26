@@ -57,7 +57,7 @@ class SearchController  {
                   echo "0 results";
               }
 
-              echo "<h1 class='search'>Search Result<span class='result'>found <u>".$sum."</u> result(s)</span></h1>";
+              echo "<br><h1 class='search'>Search Result<span class='result'>found <u>".$sum."</u> result(s)</span></h1><br><br><br><br>";
               if ($sum == 0) {
                   echo "Not Found";
               } else {
@@ -65,7 +65,7 @@ class SearchController  {
                 while($i < sizeof($result)) {
                     $row = $result[$i];
                     echo "
-                    <div><img src='tayo.jpg' width='100px' height='100px' align='left'>
+                    <div><img src='tayo.jpg' width='90px' height='110px' align='left'>
                         <b class='title'>". $row["title"]. "</b><br>
                         <b class='author'>" . $row["author"] . "- ".number_format((float)$row["rating"],1,'.','')."/5.0 (".$row["user"]." votes)
                         </b><br><span class='description'>". $row["description"]."</span><br>

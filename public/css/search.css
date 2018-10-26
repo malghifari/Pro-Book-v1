@@ -30,3 +30,8 @@ form.bloksearch::after {
     clear: both;
     display: table;
 }
+
+.title{
+    font-family: 'Dosis', sans-serif;
+}
+

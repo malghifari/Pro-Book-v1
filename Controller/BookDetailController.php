@@ -19,17 +19,19 @@ class BookDetailController  {
         title,
         description,
         author
-      FROM 
+        FROM 
         `book` 
-        JOIN 
+        LEFT JOIN 
           `review` 
           USING 
             (`id-book`)
-            JOIN 
+           LEFT JOIN 
               `user`
               USING (`username`)
       WHERE
         `id-book` = :idbook;";
+
+
     $queryParams = array(
       ':idbook' => $_GET['id-book']
     );

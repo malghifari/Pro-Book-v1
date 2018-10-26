@@ -25,7 +25,30 @@
           </div>
           <div class="image-rating">
             <img src="<?php echo '../../public/img/' . $reviews[0]['bookAvatar']?>" alt="foto-buku">
+            <br><br><br><br><br><br><br><br>
             <div class="rating">
+              <?php
+                if($reviews[0]['rating'] < 3) {
+                  if($reviews[0]['rating'] >= 2 ) {
+                    echo "<img src='../../public/img/star2.jpg' alt='foto-buku' class='star_png'>";
+                  } elseif($reviews[0]['rating'] >= 1) {
+                    echo "<img src='../../public/img/star1.jpg' alt='foto-buku'class='star_png'>";
+                  } else{
+                    echo "<img src='../../public/img/star0.jpg' alt='foto-buku'class='star_png'>";
+                  }
+                } else {
+                  if($reviews[0]['rating'] < 4) {
+                    echo "<img src='../../public/img/star3.jpg' alt='foto-buku' class='star_png'>";
+                  } elseif ($reviews[0]['rating'] < 5) {
+                    echo "<img src='../../public/img/star4.jpg' alt='foto-buku' class='star_png'>";
+                  } else {
+                    echo "<img src='../../public/img/star5.jpg' alt='foto-buku' class='star_png'>";
+                  }
+                }
+
+                echo "<div class='rate'>".number_format((float)$reviews[0]['rating'],1,'.','')."/5.0</div>";
+                  
+              ?>
             </div>
           </div>               
         </div>
@@ -78,14 +101,14 @@
                 echo $view = 
                 "<tr>
                   <td>
-                    <img src=" . '../../public/img/' . $review['avatar'] . " alt='tesdoang'>
+                    <img src=" . '../../public/img/' . $review['avatar'] . " alt='No Review'>
                   </td>
                   <td>
                     <h3>". $review['username']."</h3>
                     ". $review['content']."
                   <td>
-                  <td"
-                    . $review['rating']."
+                  <td>
+                    <img src='../../public/img/star-on1.png' alt='tesdoang' calss = 'imagerev'><br><span class='ratingrev'>". number_format((float)$review['rating'],1,'.','')."/5.0</span>
                   <td>
                 </tr>";
               }

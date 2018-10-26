@@ -20,8 +20,8 @@
             <?php
                 $sql=ReviewController::review($_GET['id-order']);
                 $_SESSION['sql'] = $sql;
-                echo "
-                <img src='../../public/img/".$sql[0]["avatar"]."' width='100px' height='100px' >
+                echo "<br>
+                <img src='../../public/img/".$sql[0]["avatar"]."' width='95px' height='210px' >
                 <h1 class='title-review'>".$sql[0]["title"]."</h1>
                 <p class='author-review'>".$sql[0]["author"]."</p><br><br>";
             ?>
