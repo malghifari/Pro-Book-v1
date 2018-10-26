@@ -1,21 +1,23 @@
-<center><div><b> # Tugas 1 IF3110 Pengembangan Aplikasi Berbasis Web <b> </div> </center>
+#<center><div align="center" style = "font-size = 25pt;"><b>Tugas 1 IF3110 Pengembangan Aplikasi Berbasis Web <b> </div> </center>
 
-<center><b> ## Membuat sebuah Website Toko Buku <b></center>
+##<center><div align="center"><b> Membuat sebuah Website Toko Buku <b></center>
 
 
-OLEH 
+<div align="center" style = "font-size = 15pt;">OLEH </div>
 
 <b> KELOMPOK -IDM <b>
 
-M. Alghifari - 13516038'
-Dandy Arif Rahman - 13516128
-Ivan Fadillah - 13516128
 
+<div align="center" style = "font-size = 13pt;">
+<p>M. Alghifari - 13516038</p>
+<p>Dandy Arif Rahman - 13516128</p>
+<p>Ivan Fadillah - 13516128</p>
+</div>
 
 
 ## Deskripsi Singkat
 
-Pada tugas besar ini, Anda diminta untuk membuat aplikasi *toko buku online* **berbasis web** yang memungkinkan seorang pengguna untuk membeli dan memberi komentar pada buku. Untuk menggunakan aplikasi ini, seorang pengguna harus melakukan *login*. 
+Pada tugas besar ini, Kami diminta untuk membuat aplikasi *toko buku online* **berbasis web** yang memungkinkan seorang pengguna untuk membeli dan memberi komentar pada buku. Untuk menggunakan aplikasi ini, seorang pengguna harus melakukan *login*. 
 
 Anda diminta untuk membuat tampilan sedemikian hingga mirip dengan tampilan pada contoh. Website yang diminta tidak perlu responsive. Desain tampilan tidak perlu dibuat indah. Icon dan jenis font tidak harus sama dengan contoh. Warna font, garis pemisah, dan perbedaan ukuran font harus terlihat sesuai contoh. Format rating dan waktu harus terlihat sesuai contoh. Perhatikan juga **tata letak** elemen-elemen.
 
