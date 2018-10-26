@@ -22,12 +22,8 @@
                 foreach ($orders as $order) {
                     if($order['flag'] == 1) {
                         $Reviewed = 'Belum direview';
-<<<<<<< HEAD
-                        $Reviewbutton = '<a href="Review.php" class="review-button"><button type="submit" class ="button">Review</button></a>';
-=======
                         $Reviewbutton = '<a href="" class="review-button">Review</a>';
                         $Reviewbutton = '<a href="" class="review-button"><button type="submit" class ="button">Review</button></a>';
->>>>>>> 34a447975694267a62ac9bad2b3f973bfac3a06f
                     } else {
                         $Reviewed = 'Anda sudah memberikan review';
                         $Reviewbutton = '';

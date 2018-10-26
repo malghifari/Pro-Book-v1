@@ -15,16 +15,16 @@
 	</head>
   <body>
     <div class="frame">
-      <?php include Config::DOCUMENT_ROOT . "/views/includes/Header.php"?>
+      <?php include Config::DOCUMENT_ROOT . "/views/includes/Header.php";?>
       <div class="container">
         <div class="flex-container">
           <div class="description">
-            <h1>Nota Hidup</h1>
-            <h3>Light R. D. B.</h3>
-            <div class="desc">Buku ajaib yang berisi nama-nama orang terpilih. <br>Jika namamu tertulis di buku ini maka kamu adalah salah satu orang yang beruntung</div>
+            <h1><?php echo $reviews[0]['title'] ?></h1>
+            <h3><?php echo $reviews[0]['author'] ?></h3>
+            <div class="desc"><?php echo $reviews[0]['description'] ?></div>
           </div>
           <div class="image-rating">
-            <img src="../../public/img/tayo.jpg" alt="foto-buku">
+            <img src='<?php "../../public/img/" . $reviews[0]['bookAvatar']?>' alt="foto-buku">
             <div class="rating">
             </div>
           </div>               
@@ -32,17 +32,22 @@
         <form action="<?php echo Config::APP_URL . '/Controller/BookDetailController.php' ?>" method="post">
           <h3>Order</h3>
           <div class="form-input-attr">
-            <label for="jumlah">Jumlah:</label>
-            <select name="jumlah">
+            <label for="quantity">Jumlah:</label>
+            <select name="quantity" id="quantity">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
+              <option value="4">5</option>
+              <option value="4">6</option>
+              <option value="4">7</option>
             </select>
           </div>
           <div id="order-button">
-            <input type="submit" value="Order">
+            <input type="submit" value="Order" name="Order">
           </div>
+          <input type="hidden" value="<?php echo $_GET['id-book']?>" name="idbook" id="idbook">
+          <input type="hidden" value="<?php echo $_COOKIE['username']?>" name="username" id="username">
         </form>
         <div class="review">
           <table>
@@ -72,5 +77,6 @@
         </div>
       </div>
     </div>
+    <script src="../../public/js/BookDetail.js"></script>
   </body>
 </html>
