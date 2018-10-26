@@ -24,7 +24,7 @@
 		<div class = frame>
 			<?php include Config::DOCUMENT_ROOT . "/views/includes/Header.php"?>
 			<h1>Edit Profile</h1>
-			<form method="post" action="../../Controller/ProfileController.php">
+			<form method="post" action="../../Controller/ProfileController.php" enctype="multipart/form-data">
 <!--                <div>-->
 <!--                    <div class="row">-->
 <!--                        <div class="first-column avatar-column">-->
@@ -69,12 +69,13 @@
 				    <th style="width:60%;"></th>
 			  	</tr>
 			  	<tr>
-			  		<td><img id="profile-picture" src="../../public/img/tayo.jpg"></td>
+			  		<td><img id="profile-picture" src="<?php echo $profile["avatar"]?>"></td>
 			  		<td>
 			  			Update profile picture
+                        <input type="file" id="hidden-button" name="avatar" id="avatar">
                         <div class="form-image">
-                            <label  class="kotak" for="avatar"></label>
-                            <input type="file" name="avatar" id="avatar">
+                            <input type="text" id="file-name">
+                            <button type="button" onclick="submitFile()">Browse...</button>
                         </div>
 			  		</td>
 			  	</tr>
