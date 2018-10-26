@@ -19,7 +19,7 @@
             <h1 style="font-family: 'Dosis', sans-serif";>Search Book</h1>
             <!-- The Form -->
             <form class="bloksearch"  action="<?php echo Config::APP_URL . '/views/pages/SearchResult.php' ?>" method="post">
-                <input type="text" placeholder="Input search term.." name="title" value=""><br><br><br>
+                <input type="text" placeholder="Input search term.." name="title" value=""><br><br><br><br>
                 <button type="submit" >Search
                 </button>
             </form>

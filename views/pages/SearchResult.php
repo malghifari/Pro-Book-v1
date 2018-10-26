@@ -67,7 +67,7 @@ class SearchController  {
                 while($i < sizeof($result)) {
                     $row = $result[$i];
                     echo "
-                    <div><img src=". $row["avatar"] ." width='100px' height='100px' align='left'>
+                    <div><img src='../../public/img/". $row["avatar"] ."' width='100px' height='100px' align='left'>
                         <b class='title'>". $row["title"]. "</b><br><br>
                         <b class='author'>" . $row["author"] . "- ".number_format((float)$row["rating"],1,'.','')."/5.0 (".$row["user"]." votes)
                         </b><br><span class='description'>". $row["description"]."</span><br>

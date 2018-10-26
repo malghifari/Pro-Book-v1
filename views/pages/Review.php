@@ -1,8 +1,8 @@
 <?php
     session_start();
-	$_SESSION['page'] = 'History';
+	//$_SESSION['page'] = 'History';
 	include '../../Config/Config.php';
-	require_once(Config::DOCUMENT_ROOT . '/Controller/HistoryController.php');
+	require_once(Config::DOCUMENT_ROOT . '/Controller/ReviewController.php');
 ?>
 
 <!DOCTYPE html>
@@ -11,40 +11,48 @@
 		<title>History</title>
 		<link rel="stylesheet" href="../../public/css/global.css" type="text/css"/>
 		<link rel="stylesheet" href="../../public/css/header.css" type="text/css"/>
-		<link rel="stylesheet" type="text/css" href="../../public/css/review.css">
+		<link rel="stylesheet" href="../../public/css/review.css">
 	</head>
 	<body>
 		<div class="frame">
             <?php include Config::DOCUMENT_ROOT . "/views/includes/Header.php"?>
             <div class="margin">
-              <img src='' width='100px' height='100px' >
-                <h1 class="title-review">Nota Hidup</h1>
-                <p class="author-review">Ligh R. D. B.</p><br><br>
+            <?php
+                $sql=ReviewController::review($_GET['id-order']);
+                $_SESSION['sql'] = $sql;
+                echo "
+                <img src='../../public/img/".$sql[0]["avatar"]."' width='100px' height='100px' >
+                <h1 class='title-review'>".$sql[0]["title"]."</h1>
+                <p class='author-review'>".$sql[0]["author"]."</p><br><br>";
+            ?>
                 <h2 class="rating">Add Rating</h2>
-
-                <form>
-                <fieldset>
-                    <span class="star-cb-group">
-                    <input type="radio" id="rating-5" name="rating" value="1" /><label for="rating-1">1</label>
-                    <input type="radio" id="rating-4" name="rating" value="2" checked="checked" /><label for="rating-2">2</label>
-                    <input type="radio" id="rating-3" name="rating" value="3" /><label for="rating-3">3</label>
-                    <input type="radio" id="rating-2" name="rating" value="4" /><label for="rating-4">4</label>
-                    <input type="radio" id="rating-1" name="rating" value="5" class="star-cb-clear" /><label for="rating-5">5</label>
-                    </span>
-                </fieldset>
-                </form>
-
-                <h2 class="rating"> Add Comment</h2>
-                <form action="/action_page.php" id = "">
-                    <textarea rows = "4" cols="50" name="comment" form ="">Enter text here...
-                    </textarea>
-                </form>
-
-            </div>
-            <div class="button">
-                <a href='History.php'><button type='submit' class='submit'>Submit</button></a> 
-                <a href='History.php'><button type='submit' class ='back'>Back</button></a>
-        </div>
+                <form action="<?php echo Config::APP_URL . '/Controller/ReviewController.php' ?>" method="post">
+                    <div class="star">
+                        <p class="starRate">
+                            <span class="starRating">
+                                <input id="rating5" type="radio" name="rating" value="5">
+                                <label for="rating5">5</label>
+                                <input id="rating4" type="radio" name="rating" value="4">
+                                <label for="rating4">4</label>
+                                <input id="rating3" type="radio" name="rating" value="3" checked>
+                                <label for="rating3">3</label>
+                                <input id="rating2" type="radio" name="rating" value="2">
+                                <label for="rating2">2</label>
+                                <input id="rating1" type="radio" name="rating" value="1">
+                                <label for="rating1">1</label>
+                            </span>
+                        </p>
+                    </div>
+                    <br>
+                    <h2 class="rating">Add Comment</h2>
+                        <textarea rows = "4" cols="56" name="comment" id ="comment">Enter text here...
+                        </textarea>
+                </div>
+                <div class="button">
+                    <button type='submit' class ='submit'name='Review' value='REVIEW'>Submit</button>
+                    <a href='History.php'><button type='submit' class ='back'>Back</button></a>
+                </div>
+            </form>
         </div>
     </body>
 </html>

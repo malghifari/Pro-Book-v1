@@ -31,7 +31,7 @@ img {
 .author-review {    
     margin-top: 0px;
     font-family: calibri;  
-    font-size: 12px; 
+    font-size: 17px; 
 }
 
 .rating {
@@ -48,7 +48,6 @@ button {
     padding: 0px;
     font-size: 17px;
     border: 1px solid grey;
-    border-left: none;
     cursor: pointer;
     border-radius: 3px;
     margin-top:17px;
@@ -67,3 +66,77 @@ button {
     float: right;
 }
 
+
+a{
+    color           : yellow;
+    text-decoration : none;
+  }
+  
+  .starRating:not(old){
+    display        : inline-block;
+    height         : 1.5em;
+    overflow       : hidden;
+    vertical-align : bottom;
+    padding-top: -20px;
+  }
+
+  .star  {
+      margin-top: 0px;
+      margin-bottom: 20px;
+  }
+  
+  .starRating:not(old) > input{
+    margin-right : -100%;
+    opacity      : 0;
+  }
+  
+  .starRating:not(old) > label{
+    display         : block;
+    float           : right;
+    position        : relative;
+    background      : url('../../public/img/star-off1.png');
+    background-size : contain;
+  }
+  
+  .starRating:not(old) > label:before{
+    content         : '';
+    display         : block;
+    width           : 1.5em;
+    height          : 1.5em;
+    background      : url('../../public/img/star-on1.png');
+    background-size : contain;
+    opacity         : 0;
+    transition      : opacity 0.2s linear;
+  }
+  
+  .starRating:not(old) > label:hover:before,
+  .starRating:not(old) > label:hover ~ label:before,
+  .starRating:not(:hover) > :checked ~ label:before{
+    opacity : 1;
+  }
+  
+  body {
+    font-family: 'Varela Round', 'Open Sans';
+    font-size: 32px;
+    letter-spacing: 0px;
+}
+.starRate {
+    position: absolute;
+    /* margin: 0px; */
+    margin-right: 100px;
+    margin-block-end: 50%;
+    margin-block-start: -1.2%;
+}
+
+textarea {
+    -webkit-appearance: textarea;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    flex-direction: column;
+    resize: auto;
+    cursor: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    border: 1px solid grey;
+    padding: 2px;
+}
