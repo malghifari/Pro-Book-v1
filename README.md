@@ -1,11 +1,11 @@
-###<div align="center" style = "font-size = 25pt;"><b>Tugas 1 IF3110 Pengembangan Aplikasi Berbasis Web <b> </div> 
+## <div align="center" style = "font-size = 25pt;"><b>Tugas 1 IF3110 Pengembangan Aplikasi Berbasis Web <b> </div> 
 
-##<div align="center"><b> Membuat sebuah Website Toko Buku <b> </div>
+# <div align="center"><b> Membuat sebuah Website Toko Buku </b> </div>
 
 <p></p>
 <div align="center" style = "font-size = 15pt;">OLEH </div>
 <p></p>
-#<b> KELOMPOK -IDM <b>
+#<b> KELOMPOK -IDM </b>
 
 <br>
 <div align="center" style = "font-size = 13pt;">
@@ -177,5 +177,8 @@ Asisten IF3110 2018
 Audry | Erick | Holy | Kevin J. | Tasya | Veren | Vincent H.
 
 Dosen : Yudistira Dwi Wardhana | Riza Satria Perdana | Muhammad Zuhri Catur Candra
+
+Terimakasih,
+
 
 </div>
