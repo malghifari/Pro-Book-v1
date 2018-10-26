@@ -62,6 +62,22 @@ td > textarea {
 }
 
 #img-uploader {
-	width: 30px;
+	width: 300px;
 	height: 30px;
+}
+
+.kotak {
+	width: 50%;
+	height: 10%px;
+	border: black solid 1px;
+	box-sizing: border-box;
+	text-align: right;
+}
+
+.form-image	{
+	display: flex;
+}
+
+#avatar	{
+	text-align: right;
 }
