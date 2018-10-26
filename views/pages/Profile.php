@@ -27,7 +27,7 @@
 					<a href="EditProfile.php"> <img id="edit-profile-logo" src="../../public/img/edit-profile-logo.png"></a>
 				</div>
 				<br>
-				<img src="../../public/img/tayo.jpg" alt="Avatar" class="avatar">
+				<img src="<?php echo $profile["avatar"]?>" alt="Avatar" class="avatar">
 
 				<h2 class="profileTitle"><?php echo $profile["name"] ?></h2>
 				<br>
