@@ -50,6 +50,7 @@
                 </div>
                 <div class="button">
                     <button type='submit' class ='submit'name='Review' value='REVIEW'>Submit</button>
+
                     <a href='History.php'><button type='submit' class ='back'>Back</button></a>
                 </div>
             </form>

@@ -31,20 +31,21 @@
                                 <div class='row'>
                                     <div class='avatar-collumn'>
                                         <div class='avatar'>
-                                            <img src=${order['avatar']}>
+                                            <img src='../../public/img/${order['avatar']}'>
                                         </div>
                                     </div>
                                     <div class='description'>
                                         <h2>${order['title']}</h2>
                                         <p>Jumlah: ${order['quantity']}</p><br>
                                         <p>$Reviewed</p>
-                                    </div>
+                                        <br>$Reviewbutton<br>
+                                    </div><br>
                                     <div class='details'>
                                         <div class='date'>${order['date']}</div>
                                         <div class='date'>Nomor Order : #${order['order-no']}</div>
-                                        $Reviewbutton
-                                    </div>
+                                    </div><br>
                                 </div>
+                                <br><br>
                             </div>";
                 }
             ?>

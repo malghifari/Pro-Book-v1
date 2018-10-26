@@ -2,7 +2,7 @@
   require_once('../../Config/Config.php');
 
   session_start();
-  $_SESSION['page'] = 'Search';
+
   if (class_exists('Config'))  {
       require_once(Config::DOCUMENT_ROOT . '/Model/Database.php');
   } else  {
@@ -16,9 +16,9 @@ class SearchController  {
         } else {
             echo "not assign";
         }
-        $query = "SELECT book.`id-book`,avatar, title, author, description, AVG(rating) AS rating, COUNT(username) AS user  
-                  FROM book LEFT JOIN review ON book.`id-book` = review.`id-book`
-                  GROUP BY book.`id-book`";
+        $query = "SELECT 'id-book', title, author, description, AVG(rating) AS rating, COUNT(username) AS user  
+                  FROM book NATURAL JOIN review
+                  GROUP BY book.title";
         return $result = Database::exec($query);
     }
 
@@ -31,9 +31,7 @@ class SearchController  {
     <head>
       <meta charset="utf-8" />
       <title>Search Result</title>
-      <link rel="stylesheet" href="../../public/css/global.css" type="text/css"/>
-			<link rel="stylesheet" href="../../public/css/header.css" type="text/css"/>
-      <link rel="stylesheet" href="../../public/css/search-result.css" type="text/css"/>
+      <link rel="stylesheet" href="../../public/css/search_result.css" type="text/css"/>
     </head>
     <body>
         <div class = "frame">
@@ -67,11 +65,11 @@ class SearchController  {
                 while($i < sizeof($result)) {
                     $row = $result[$i];
                     echo "
-                    <div><img src='../../public/img/". $row["avatar"] ."' width='100px' height='100px' align='left'>
-                        <b class='title'>". $row["title"]. "</b><br><br>
+                    <div><img src='tayo.jpg' width='100px' height='100px' align='left'>
+                        <b class='title'>". $row["title"]. "</b><br>
                         <b class='author'>" . $row["author"] . "- ".number_format((float)$row["rating"],1,'.','')."/5.0 (".$row["user"]." votes)
                         </b><br><span class='description'>". $row["description"]."</span><br>
-                        <a href='BookDetail.php?id-book=". $row["id-book"]."'><button type='submit' class ='button'>Detail</button></a><br><br><br><br>
+                        <button type='submit' class ='button'>Detail</button><br><br><br><br>
                     </div>";
                     $i++;
               }
