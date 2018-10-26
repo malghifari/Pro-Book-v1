@@ -32,11 +32,28 @@ function order(element) {
 }
 
 function notif(idorder)  {
-  alert('Pemesanan Berhasil! Nomor Transaksi: ' + idorder);
+  document.querySelector('.message-header').innerHTML = 'Pemesanan Berhasil!';
+  document.querySelector('.message-content').innerHTML = 'Nomor Transaksi: ' + idorder;
+  modal.style.display = "block";
 }
 
 var xmlhttp = getXmlHttpRequest();
 var form = document.querySelector('form');
+
+var modal = document.querySelector('#myModal');
+var span = document.querySelector(".close");
+
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+      modal.style.display = "none";
+  }
+}
+
 
 form.onsubmit = function()  {
   order(form);

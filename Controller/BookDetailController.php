@@ -58,7 +58,7 @@ class BookDetailController  {
     Database::exec($query, $queryParams);
     $query2 = "
       SELECT 
-        LAST_INSERT_ID()
+        LAST_INSERT_ID();
       ";
     return Database::exec($query2);
   }

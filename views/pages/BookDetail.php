@@ -24,13 +24,13 @@
             <div class="desc"><?php echo $reviews[0]['description'] ?></div>
           </div>
           <div class="image-rating">
-            <img src='<?php "../../public/img/" . $reviews[0]['bookAvatar']?>' alt="foto-buku">
+            <img src="<?php echo '../../public/img/' . $reviews[0]['bookAvatar']?>" alt="foto-buku">
             <div class="rating">
             </div>
           </div>               
         </div>
         <form action="<?php echo Config::APP_URL . '/Controller/BookDetailController.php' ?>" method="post">
-          <h3>Order</h3>
+          <div class="judul-order">Order</div>
           <div class="form-input-attr">
             <label for="quantity">Jumlah:</label>
             <select name="quantity" id="quantity">
@@ -49,7 +49,24 @@
           <input type="hidden" value="<?php echo $_GET['id-book']?>" name="idbook" id="idbook">
           <input type="hidden" value="<?php echo $_COOKIE['username']?>" name="username" id="username">
         </form>
+        <div id="myModal" class="modal">
+          <div class="modal-capsul">
+            <div class="modal-content">
+              <div class="close">&times;</div>
+                <div class="flex-message">
+                  <div class="img-success">
+                    <img src="../../public/img/success.png" alt="foto-buku">
+                  </div>
+                  <div class="message">
+                    <div class="message-header"></div>
+                    <div class="message-content"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         <div class="review">
+          <div class="judul-review">Review</div>
           <table>
             <tr>
               <th style="width: 15%"></th>
