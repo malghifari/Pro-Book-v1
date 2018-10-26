@@ -82,3 +82,10 @@ td > textarea {
 #file-name {
 	width: 100%;
 }
+
+img	{
+	width: 100px;
+	object-fit: contain;
+	display: block;
+	height: 100px;
+}

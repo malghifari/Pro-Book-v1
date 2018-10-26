@@ -25,56 +25,18 @@
 			<?php include Config::DOCUMENT_ROOT . "/views/includes/Header.php"?>
 			<h1>Edit Profile</h1>
 			<form method="post" action="../../Controller/ProfileController.php" enctype="multipart/form-data">
-<!--                <div>-->
-<!--                    <div class="row">-->
-<!--                        <div class="first-column avatar-column">-->
-<!--                            <div class="avatar">-->
-<!---->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="second-column">-->
-<!--                            Update profile picture-->
-<!---->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="row">-->
-<!--                        <div class="first-collumn">-->
-<!---->
-<!--                        </div>-->
-<!--                        <div class="second-collumn">-->
-<!---->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="row">-->
-<!--                        <div class="first-collumn">-->
-<!---->
-<!--                        </div>-->
-<!--                        <div class="second-collumn">-->
-<!---->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="row">-->
-<!--                        <div class="first-collumn">-->
-<!---->
-<!--                        </div>-->
-<!--                        <div class="second-collumn">-->
-<!---->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-
 			  <table>
 			  	<tr>
 			  		<th style="width:25%;"></th>
 				    <th style="width:60%;"></th>
 			  	</tr>
 			  	<tr>
-			  		<td><img id="profile-picture" src="<?php echo $profile["avatar"]?>"></td>
+			  		<td><img id="profile-picture" src="<?php echo '../../public/img/' . $profile["avatar"]?>"></td>
 			  		<td>
 			  			Update profile picture
                         <input type="file" id="hidden-button" name="avatar" id="avatar">
                         <div class="form-image">
-                            <input type="text" id="file-name">
+                            <input type="text" id="file-name" name="avatar-user">
                             <button type="button" onclick="submitFile()">Browse...</button>
                         </div>
 			  		</td>
