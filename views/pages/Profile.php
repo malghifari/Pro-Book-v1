@@ -1,14 +1,24 @@
 <?php
+<<<<<<< Updated upstream
+	if (empty($_COOKIE['username'])) {
+		header('Location: Login.php');
+		die();
+	}
 	include '../../Config/Config.php';
 	include '../../Controller/ProfileController.php';
 	session_start();
 	$_SESSION['page'] = 'Profile';
+=======
+>>>>>>> Stashed changes
 	if (empty($_COOKIE['username'])) {
 		header('Location: Login.php');
 		die();
-	} else {
-		$profile = ProfileController::fetchUser($_COOKIE['username']);	
 	}
+	include '../../Config/Config.php';
+	include '../../Controller/ProfileController.php';
+	session_start();
+	$_SESSION['page'] = 'Profile';
+	$profile = ProfileController::fetchUser($_COOKIE['username']);	
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +37,7 @@
 					<a href="EditProfile.php"> <img id="edit-profile-logo" src="../../public/img/edit-profile-logo.png"></a>
 				</div>
 				<br>
-				<img src="<?php echo "../../public/img/".$profile["avatar"]?>" alt="Avatar" class="avatar">
+				<img src="<?php echo '../../public/img/'.$profile['avatar']?>" alt="Avatar" class="avatar">
 
 				<h2 class="profileTitle"><?php echo $profile["name"] ?></h2>
 				<br>

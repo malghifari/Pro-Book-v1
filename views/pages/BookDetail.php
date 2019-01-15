@@ -1,4 +1,12 @@
 <?php
+	if (empty($_COOKIE['username'])) {
+		header('Location: Login.php');
+		die();
+<<<<<<< Updated upstream
+	}
+=======
+  }
+>>>>>>> Stashed changes
   require_once('../../Config/Config.php');
   include Config::DOCUMENT_ROOT . '/Controller/BookDetailController.php';
   $_SESSION['page'] = 'Search';
@@ -25,28 +33,44 @@
           </div>
           <div class="image-rating">
             <img src="<?php echo '../../public/img/' . $reviews[0]['bookAvatar']?>" alt="foto-buku">
-            <br><br><br><br><br><br><br><br>
             <div class="rating">
               <?php
-                if($reviews[0]['rating'] < 3) {
-                  if($reviews[0]['rating'] >= 2 ) {
+<<<<<<< Updated upstream
+                if($reviews[0]['average'] < 3) {
+                  if($reviews[0]['average'] >= 2 ) {
                     echo "<img src='../../public/img/star2.jpg' alt='foto-buku' class='star_png'>";
-                  } elseif($reviews[0]['rating'] >= 1) {
+                  } elseif($reviews[0]['average'] >= 1) {
+=======
+                if($avgrating < 3) {
+                  if($avgrating >= 2 ) {
+                    echo "<img src='../../public/img/star2.jpg' alt='foto-buku' class='star_png'>";
+                  } elseif($avgrating >= 1) {
+>>>>>>> Stashed changes
                     echo "<img src='../../public/img/star1.jpg' alt='foto-buku'class='star_png'>";
                   } else{
                     echo "<img src='../../public/img/star0.jpg' alt='foto-buku'class='star_png'>";
                   }
                 } else {
-                  if($reviews[0]['rating'] < 4) {
+<<<<<<< Updated upstream
+                  if($reviews[0]['average'] < 4) {
                     echo "<img src='../../public/img/star3.jpg' alt='foto-buku' class='star_png'>";
-                  } elseif ($reviews[0]['rating'] < 5) {
+                  } elseif ($reviews[0]['average'] < 5) {
+=======
+                  if($avgrating < 4) {
+                    echo "<img src='../../public/img/star3.jpg' alt='foto-buku' class='star_png'>";
+                  } elseif ($avgrating < 5) {
+>>>>>>> Stashed changes
                     echo "<img src='../../public/img/star4.jpg' alt='foto-buku' class='star_png'>";
                   } else {
                     echo "<img src='../../public/img/star5.jpg' alt='foto-buku' class='star_png'>";
                   }
                 }
 
-                echo "<div class='rate'>".number_format((float)$reviews[0]['rating'],1,'.','')."/5.0</div>";
+<<<<<<< Updated upstream
+                echo "<div class='rate'>".number_format((float)$reviews[0]['average'],1,'.','')."/5.0</div>";
+=======
+                echo "<div class='rate'>".number_format((float)$avgrating,1,'.','')."/5.0</div>";
+>>>>>>> Stashed changes
                   
               ?>
             </div>

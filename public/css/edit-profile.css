@@ -7,14 +7,8 @@ table {
 	padding-right: 0px;
 }
 
-h1 {
-	color:#f26600; 
-	font-size:28pt; 
-	font-family: 'Open Sans', sans-serif;
-}
-
-td {
-	font-family: calibri;
+td	{
+	font-size: 15px;
 }
 
 td > input {
@@ -36,7 +30,6 @@ td > textarea {
 	border-radius: 5px;
 	text-align: center;
 	font-size: 15pt;
-	font-family: calibri;
 	width: fit-content;
 	width: -moz-fit-content;
 	position: absolute;
@@ -58,7 +51,6 @@ td > textarea {
 	text-align: center;
 	position: absolute;
 	right: 	15px;
-	font-family: calibri;
 }
 
 #img-uploader {

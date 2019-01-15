@@ -1,4 +1,8 @@
 <?php
+	if (empty($_COOKIE['username'])) {
+		header('Location: Login.php');
+		die();
+	}
   require_once('../../Config/Config.php');
 
   session_start();

@@ -1,6 +1,10 @@
 <?php
+	if (empty($_COOKIE['username'])) {
+		header('Location: Login.php');
+		die();
+	}
     session_start();
-	//$_SESSION['page'] = 'History';
+	$_SESSION['page'] = 'History';
 	include '../../Config/Config.php';
 	require_once(Config::DOCUMENT_ROOT . '/Controller/ReviewController.php');
 ?>
@@ -16,15 +20,16 @@
 	<body>
 		<div class="frame">
             <?php include Config::DOCUMENT_ROOT . "/views/includes/Header.php"?>
-            <div class="margin">
-            <?php
-                $sql=ReviewController::review($_GET['id-order']);
-                $_SESSION['sql'] = $sql;
-                echo "<br>
-                <img src='../../public/img/".$sql[0]["avatar"]."' width='95px' height='210px' >
-                <h1 class='title-review'>".$sql[0]["title"]."</h1>
-                <p class='author-review'>".$sql[0]["author"]."</p><br><br>";
-            ?>
+            <div class="container">
+                <div class="margin">
+                <?php
+                    $sql=ReviewController::review($_GET['id-order']);
+                    $_SESSION['sql'] = $sql;
+                    echo "
+                    <img src='../../public/img/".$sql[0]["avatar"]."' width='95px' height='210px' >
+                    <h1 class='title-review'>".$sql[0]["title"]."</h1>
+                    <p class='author-review'>".$sql[0]["author"]."</p><br><br>";
+                ?>
                 <h2 class="rating">Add Rating</h2>
                 <form action="<?php echo Config::APP_URL . '/Controller/ReviewController.php' ?>" method="post">
                     <div class="star">
@@ -44,16 +49,18 @@
                         </p>
                     </div>
                     <br>
-                    <h2 class="rating">Add Comment</h2>
-                        <textarea rows = "4" cols="56" name="comment" id ="comment">Enter text here...
-                        </textarea>
-                </div>
-                <div class="button">
-                    <button type='submit' class ='submit'name='Review' value='REVIEW'>Submit</button>
+                    <br>
+                    <div>
+                        <h2 class="rating">Add Comment</h2>
+                        <textarea name="comment" id ="comment" placeholder="Enter text here..."></textarea>
+                    </div>
+                    <div class="button">
+                        <button type='submit' class ='submit'name='Review' value='REVIEW'>Submit</button>
 
-                    <a href='History.php'><button type='submit' class ='back'>Back</button></a>
-                </div>
-            </form>
+                        <a href='History.php'><button type='submit' class ='back'>Back</button></a>
+                    </div>
+                </form>
+            </div>
         </div>
     </body>
 </html>

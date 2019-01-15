@@ -18,7 +18,8 @@ class BookDetailController  {
         user.avatar,
         title,
         description,
-        author
+        author,
+        AVG(rating) as average
         FROM 
         `book` 
         LEFT JOIN 
@@ -74,6 +75,13 @@ if ($_POST)  {
   echo $idorder;
 } else  {
   $reviews = BookDetailController::bookdetail();
+  $sum = 0;
+  $count = 0;
+  foreach ($reviews as $areview)  {
+    $sum += $areview['rating'];
+    $count++;
+  }
+  (float)$avgrating = (float)$sum/$count;
 }
 
 ?>

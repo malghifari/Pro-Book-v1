@@ -31,7 +31,6 @@ form.bloksearch::after {
     display: table;
 }
 
-.title{
-    font-family: 'Dosis', sans-serif;
+h1 {
+    margin-bottom: 30px;
 }
-

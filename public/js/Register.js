@@ -23,10 +23,11 @@ function elementValidation(element) {
   xmlhttp.open('GET', url, true);
   xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-      document.querySelector('.status-' + element.id).innerHTML = xmlhttp.responseText;
       if (xmlhttp.responseText === 'Available') {
+        document.querySelector('.status-' + element.id).innerHTML = "<img src='../../public/img/available.png'>";
         element.valid = true;
       } else {
+        document.querySelector('.status-' + element.id).innerHTML = "<img src='../../public/img/notavailable.png'>";
         element.valid = false;
       }
     }

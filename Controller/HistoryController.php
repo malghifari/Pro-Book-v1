@@ -14,7 +14,8 @@
         public static function fetchOrder($username){
             $query = "SELECT `id-book`, title, avatar, `id-order`, username, date, quantity,  flag 
                       FROM book natural join `order`
-                      WHERE username = '" . $username . "';";
+                      WHERE username = '" . $username . "'
+                      ORDER BY `id-order` DESC;";
             return Database::exec($query);
         }
     }

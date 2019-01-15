@@ -20,7 +20,7 @@
             if ($avatar['size'] != 0) {
                 $imageFileType = strtolower(pathinfo($avatar['name'], PATHINFO_EXTENSION));
                 move_uploaded_file($avatar["tmp_name"], Config::DOCUMENT_ROOT . "/public/img/" . $username . "." . $imageFileType);
-                $query = "UPDATE user SET avatar='" . "../../public/img/" . $username . "." . $imageFileType . "', name='"  . $_POST['name'] . "', address='" . $_POST['address'] . "', `phone-number`='" . $_POST['phone-number'] . "' WHERE username='" . $username . "'";
+                $query = "UPDATE user SET avatar='" . $username . "." . $imageFileType . "', name='"  . $_POST['name'] . "', address='" . $_POST['address'] . "', `phone-number`='" . $_POST['phone-number'] . "' WHERE username='" . $username . "'";
             } else {
                 $query = "UPDATE user SET name='"  . $_POST['name'] . "', address='" . $_POST['address'] . "', `phone-number`='" . $_POST['phone-number'] . "' WHERE username='" . $username . "'";
 

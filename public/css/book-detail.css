@@ -16,6 +16,13 @@ img	{
 	margin-right: -40px;
 }
 
+.rating {
+	position: absolute;	
+	top: 250px;
+	right: 62px;
+	margin-right: -40px;
+}
+
 .imagerev {
 	float: right;
 	width: 100px;
@@ -131,9 +138,6 @@ td {
 	color: #000;
 	text-decoration: none;
 	cursor: pointer;
-}
-.rating{
-	margin-right: 2px;
 }
 
 .star_png {
